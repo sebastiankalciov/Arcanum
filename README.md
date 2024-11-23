@@ -1,18 +1,26 @@
 # Arcanum
-Arcanum is an interactive mobile application made with React Native meant to teach school subjects using Augmented Reality
+**Arcanum** is an interactive mobile application made with **React Native** developed to teach school subjects using **Augmented Reality**.
 
-### Commands [in order] to create a development build [personal notes]:
+### Commands (in order) to create a basic, functional development build (personal notes):
 
-- npx create-expo-app [Create the react native app]
+```bash
+# create app template
+npx create-expo-app
 
-- npx expo install expo-dev-client [install dependencies]
+# install dependencies
+npx expo install expo-dev-client [install dependencies]
 
-- npx expo prebuild --clean -p android --no-install [create android folder]
+# create prebuild android folder
+npx expo prebuild --clean -p android --no-install
 
-- npm install --save @reactvision/react-viro
+# install AR support library
+npm install --save @reactvision/react-viro
 
-- [modify/add dependencies for reactvision]
+# modify/add dependencies for reactvision (very important)
 
-- eas build --profile development --platform android [for building on cloud]
+# command for building on cloud (expo)
+eas build --profile development --platform android
 
-- eas build --platform android --local [for building locally]
+# command for building locally
+eas build --platform android --local
+```

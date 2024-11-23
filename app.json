@@ -44,11 +44,7 @@
         "@reactvision/react-viro",
         {
           "android": {
-            "xRMode": [
-              "GVR",
-              "AR",
-              "OVR_MOBILE"
-            ]
+            "xRMode": "AR"
           }
         }
       ]

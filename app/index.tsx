@@ -5,7 +5,7 @@ import {
     Platform, Pressable,
     SafeAreaView,
     Text,
-    TextInput,
+    TextInput, TouchableOpacity,
     View
 } from "react-native";
 import {useState} from "react";
@@ -16,6 +16,9 @@ import {signInWithEmailAndPassword} from "@firebase/auth";
 import {auth} from "@/firebase/config";
 import {FirebaseError} from "@firebase/util";
 import {Entypo} from "@expo/vector-icons";
+import {Link} from "expo-router";
+// @ts-ignore
+import Snow from 'react-native-snow-bg';
 
 export default function Index() {
     const [email, setEmail] = useState("");
@@ -40,40 +43,18 @@ export default function Index() {
 
             <StatusBar backgroundColor={Colors.background} />
 
-            <KeyboardAvoidingView behavior = {Platform.OS === 'ios' ? 'padding': 'height'} style = {styles.titleContainer}>
-
                 <Text style = {styles.title}>Hello, adventurer</Text>
                 <Text style = {styles.subtitle}>Ready to dive into the knowledge space?</Text>
 
-                <View style = {styles.inputContainer}>
-                    <TextInput
-                        style = {styles.input}
-                        value = {email}
-                        onChangeText={setEmail}
-                        autoCapitalize="none"
-                        keyboardType="email-address"
-                        placeholder="Enter your email"
-                        placeholderTextColor={"white"}
-                    />
-                    <Entypo style={styles.icon} name="email" size={20} />
+
+                <View style = {styles.createAccountContainer}>
+                    <Link href = "/(auth)/LoginScreen" asChild>
+                        <TouchableOpacity style = {styles.signInButton}><Text style = {styles.signInButtonText}>Get started</Text></TouchableOpacity>
+                    </Link>
                 </View>
 
-                <View style = {styles.inputContainer}>
-                    <TextInput
-                        style = {styles.input}
-                        value = {password}
-                        onChangeText={setPassword}
-                        secureTextEntry
-                        placeholder="Enter your password"
-                        placeholderTextColor={"white"}
-                    />
-                    <Entypo style={styles.icon} name="lock" size={20} />
-                </View>
-
-                <Pressable style = {styles.signInButton} onPress={signIn}><Text style = {styles.signInButtonText}>Sign in</Text></Pressable>
-
-            </KeyboardAvoidingView>
-
+            <Snow fullScreen snowflakesCount={60} fallSpeed="slow" />
         </SafeAreaView>
     );
 }
+

@@ -18,11 +18,12 @@ export const styles = StyleSheet.create({
 
         alignItems: 'center',
         flexDirection: 'row',
-        borderBottomColor: "#ffffff",
-        borderBottomWidth: 1.5,
+        borderWidth: 1.5,
+        borderColor: "#afafaf",
+        borderRadius: 10,
         height: 50,
         marginTop: 20,
-        margin: 20
+        margin: 10
     },
     signInButton: {
 
@@ -38,7 +39,7 @@ export const styles = StyleSheet.create({
         color: "#000000",
         fontWeight: "bold",
         fontSize: 20,
-        padding: 5,
+        padding: 10,
     },
     input: {
         flex: 1,
@@ -47,18 +48,33 @@ export const styles = StyleSheet.create({
     },
     icon: {
         position: "absolute",
-        color: "#ffffff"
+        color: "#ffffff",
+        margin: 5
     },
     title: {
         paddingTop: 10,
         fontSize: 35,
         fontWeight: 'bold',
-        color: "white",
+        color: "#ffffff",
         textAlign: "center"
     },
     subtitle: {
         fontSize: 25,
-        color: "white",
+        color: "#ffffff",
         textAlign: "center"
     },
+    createAccountContainer: {
+        alignSelf: "center",
+        flexDirection: "row",
+        justifyContent: "center",
+        textAlign: "center",
+        color: "#ffffff"
+    },
+    dontHaveAccountText: {
+        color: "#ffffff"
+    },
+    createAccountText: {
+        color: "#a66cfc",
+        fontWeight: "bold"
+    }
 });

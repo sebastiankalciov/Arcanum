@@ -4,8 +4,20 @@ import {StatusBar} from "expo-status-bar";
 import {Colors} from "@/styles";
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
+import {useFonts} from "expo-font";
 import Ionicons from '@expo/vector-icons/Ionicons';
 export default function HomeScreen() {
+
+    const [fontsLoaded] = useFonts({
+        'JetBrains-Bold': require('@/assets/fonts/JetBrains/JetBrainsMono-Bold.ttf'),
+        'JetBrains-ExtraBold': require('@/assets/fonts/JetBrains/JetBrainsMono-ExtraBold.ttf'),
+        'JetBrains-Regular': require('@/assets/fonts/JetBrains/JetBrainsMono-Regular.ttf'),
+        'Inter-Regular': require('@/assets/fonts/Inter/Inter_18pt-Regular.ttf'),
+    });
+
+    if (!fontsLoaded) {
+        return <View/>
+    }
 
     return (
         <View style={styles.container}>

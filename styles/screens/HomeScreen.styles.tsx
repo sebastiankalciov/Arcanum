@@ -6,6 +6,7 @@ export const styles = StyleSheet.create({
         flex: 1,
         padding: 40,
         backgroundColor: Colors.background,
+        fontFamily: 'JetBrains-Regular',
     },
     textWithIconContainer: {
         flexDirection: "row",
@@ -27,7 +28,6 @@ export const styles = StyleSheet.create({
         paddingTop: 10,
         flex: 1/2,
         flexDirection: "column",
-
     },
     titleText: {
         fontSize: 25,

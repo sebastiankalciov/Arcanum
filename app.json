@@ -44,7 +44,8 @@
             "xRMode": "AR"
           }
         }
-      ]
+      ],
+      "expo-font"
     ],
     "experiments": {
       "typedRoutes": true

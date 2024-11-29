@@ -40,7 +40,7 @@ export default function Index() {
 
     return (
         <SafeAreaView style={styles.container}>
-
+            <Snow fullScreen snowflakesCount={60} fallSpeed="slow" />
             <StatusBar backgroundColor={Colors.background} />
 
                 <Text style = {styles.title}>Hello, adventurer</Text>
@@ -53,7 +53,7 @@ export default function Index() {
                     </Link>
                 </View>
 
-            <Snow fullScreen snowflakesCount={60} fallSpeed="slow" />
+
         </SafeAreaView>
     );
 }

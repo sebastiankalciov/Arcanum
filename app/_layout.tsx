@@ -25,11 +25,11 @@ export default function RootLayout() {
 
     useEffect(() => {
         if (initializing) return;
-        const isInAuthentificatedDirectory = segments[0] === '(dashboard)';
+        const isInAuthentificatedDirectory = segments[0] === 'dashboard';
 
         if (user && !isInAuthentificatedDirectory) {
             // @ts-ignore
-            router.replace('(dashboard)/HomeScreen');
+            router.replace('dashboard/HomeScreen');
         } else if (!user && isInAuthentificatedDirectory) {
             router.replace('/');
         }

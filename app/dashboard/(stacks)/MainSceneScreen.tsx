@@ -1,4 +1,4 @@
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {
     ViroAmbientLight,
     ViroARScene,
@@ -7,11 +7,20 @@ import {
     ViroTrackingReason,
     ViroTrackingStateConstants
 } from "@reactvision/react-viro";
-import {StyleSheet} from "react-native";
-import {Link} from "expo-router";
+import {StyleSheet, View} from "react-native";
+import {Link, useRouter} from "expo-router";
+import React from "react";
 
 export default function MainSceneScreen() {
+
+    const router = useRouter();
+
+    const exitAR = () => {
+        router.back()
+    }
+
     const HelloWorldSceneAR = () => {
+
         const [text, setText] = useState("Initializing AR...");
 
         function onInitialized(state: any, reason: ViroTrackingReason) {
@@ -23,32 +32,26 @@ export default function MainSceneScreen() {
             }
         }
 
-        const exitAR = () => {
-            <Link href = "./PhysicsModulesScreen.tsx">
-
-            </Link>
-        }
-
 
         return (
             <ViroARScene onTrackingUpdated={onInitialized}>
-                <ViroButton
-                    source={require("@/assets/images/exit-button.png")}
-                    position={[0, 0, -1]}
-                    height={0.5}
-                    width={1}
-                    onClick={() => {exitAR}}
-                />
                 <ViroText
                     text={text}
                     scale={[0.5, 0.5, 0.5]}
                     position={[0, 0, -1]}
                     style={styles.helloWorldTextStyle}
                 />
+
+                <ViroButton
+                    source={require("@/assets/images/exit-button.png")}
+                    position={[-1, -2, -1]}
+                    height={0.5}
+                    width={1}
+                    onClick={exitAR}
+                />
             </ViroARScene>
 
         );
-
 
     }
     return (
@@ -57,15 +60,14 @@ export default function MainSceneScreen() {
             initialScene={{
                 scene: HelloWorldSceneAR,
             }}
-            style={styles.f1}
-        />
+            style={styles.f1}>
+        </ViroARSceneNavigator>
     );
 }
 
 const styles = StyleSheet.create({
     f1: { flex: 1 },
     helloWorldTextStyle: {
-        fontFamily: "Arial",
         fontSize: 35,
         color: "#f92929",
         textAlignVertical: "center",

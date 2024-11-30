@@ -2,29 +2,24 @@ import {StyleSheet} from "react-native";
 import {Colors} from "@/styles";
 
 export const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        paddingTop: 50,
-        backgroundColor: Colors.background,
-        fontFamily: 'JetBrains-Regular',
-    },
     textWithIconContainer: {
+        gap: 10,
         flexDirection: "row",
         alignItems: "center",
     },
     iconContainer: {
         padding:5,
-        backgroundColor: "#b9abef",
+        backgroundColor: Colors.lightContrast,
         borderLeftWidth: 1.5,
         borderRightWidth: 1.5,
         borderBottomWidth: 4,
-        borderColor: "#554c80",
+        borderColor: Colors.primaryDarkContrast,
         borderRadius: 15,
     },
     contentContainer: {
         flex: 1,
         alignItems: "center",
-        padding: 10,
+
     },
     subjectsContainer: {
         gap: 30,
@@ -32,25 +27,22 @@ export const styles = StyleSheet.create({
         flexDirection: "row",
     },
     subjectText: {
-        color: "#c7c7c7",
+        color: Colors.lightGrey,
         fontWeight: "bold"
     },
     titleText: {
-        padding: 10,
         fontSize: 25,
         fontWeight: "bold",
-        color: "#ffffff"
+        color: Colors.white
     },
     subtitleText: {
-        padding: 10,
         paddingBottom: 30,
         fontSize: 15,
-        color: "#dadada"
+        color: Colors.lightGrey
     },
     categoriesText: {
-        padding: 10,
         fontSize: 25,
         fontWeight: "bold",
-        color: "#947ee8"
+        color: Colors.accentColor
     }
 });

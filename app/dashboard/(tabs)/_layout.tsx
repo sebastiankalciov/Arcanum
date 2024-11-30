@@ -5,19 +5,19 @@ import {Colors} from "@/styles";
 import SettingsScreen from "@/app/dashboard/(tabs)/SettingsScreen";
 export default function TabLayout() {
     return (
-        <Tabs screenOptions={{headerShown: false, tabBarActiveTintColor: "#947ee8"}}>
+        <Tabs screenOptions={{headerShown: false, tabBarActiveTintColor: Colors.accentColor}}>
             <Tabs.Screen
                 name = "HomeScreen"
                 options = {{
                     tabBarShowLabel: false,
-                    tabBarStyle: {backgroundColor: Colors.background, borderTopWidth: 0},
+                    tabBarStyle: {backgroundColor: Colors.primaryDark, borderTopWidth: 0},
                     tabBarIcon: ({ color }) => <AntDesign size={28} name="home" color={color} />,
                 }}/>
             <Tabs.Screen
                 name = "SettingsScreen"
                 options = {{
                     tabBarShowLabel: false,
-                    tabBarStyle: {backgroundColor: Colors.background, borderTopWidth: 0},
+                    tabBarStyle: {backgroundColor: Colors.primaryDark, borderTopWidth: 0},
                     tabBarIcon: ({ color }) => <Feather size={28} name="settings" color={color} />,
                 }}/>
         </Tabs>

@@ -8,6 +8,7 @@ import {useFonts} from "expo-font";
 import Ionicons from '@expo/vector-icons/Ionicons';
 import {KSubjectComponent} from "@/components/KSubjectComponent";
 import {Link} from "expo-router";
+import {KContainer} from "@/components/KContainer";
 
 export default function HomeScreen() {
 
@@ -23,7 +24,7 @@ export default function HomeScreen() {
     }
 
     return (
-        <View style = {styles.container}>
+        <KContainer>
             <View style = {styles.textWithIconContainer}>
                 <Text style = {styles.titleText}>Good day, adventurer</Text>
                 <MaterialIcons name="waving-hand" size={24} color="#a66cfc" />
@@ -47,7 +48,6 @@ export default function HomeScreen() {
                 </View>
             </View>
 
-            <StatusBar backgroundColor={Colors.background} />
-        </View>
+        </KContainer>
     )
 }

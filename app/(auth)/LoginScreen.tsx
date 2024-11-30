@@ -39,7 +39,7 @@ export default function LoginScreen() {
     return (
         <SafeAreaView style={styles.container}>
 
-            <StatusBar backgroundColor={Colors.background} />
+            <StatusBar backgroundColor={Colors.primaryDark} />
 
             <KeyboardAvoidingView behavior = {Platform.OS === 'ios' ? 'padding': 'height'} style = {styles.titleContainer}>
 

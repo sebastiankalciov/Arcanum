@@ -8,6 +8,7 @@ import {
     ViroTrackingStateConstants
 } from "@reactvision/react-viro";
 import {StyleSheet} from "react-native";
+import {Link} from "expo-router";
 
 export default function MainSceneScreen() {
     const HelloWorldSceneAR = () => {
@@ -22,15 +23,21 @@ export default function MainSceneScreen() {
             }
         }
 
+        const exitAR = () => {
+            <Link href = "./PhysicsModulesScreen.tsx">
+
+            </Link>
+        }
+
 
         return (
             <ViroARScene onTrackingUpdated={onInitialized}>
                 <ViroButton
                     source={require("@/assets/images/exit-button.png")}
-                    position={[1, 3, -3]}
+                    position={[0, 0, -1]}
                     height={0.5}
                     width={1}
-                    onClick={() => {console.log("blabla")}}
+                    onClick={() => {exitAR}}
                 />
                 <ViroText
                     text={text}

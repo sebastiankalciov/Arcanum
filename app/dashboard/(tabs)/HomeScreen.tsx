@@ -1,11 +1,7 @@
-import {SafeAreaView, Text, TouchableOpacity, TouchableWithoutFeedback, View} from "react-native";
+import {Text, TouchableWithoutFeedback, View} from "react-native";
 import {styles} from "@/styles/screens/HomeScreen.styles";
-import {StatusBar} from "expo-status-bar";
-import {Colors} from "@/styles";
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
-import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
 import {useFonts} from "expo-font";
-import Ionicons from '@expo/vector-icons/Ionicons';
 import {KSubjectComponent} from "@/components/KSubjectComponent";
 import {Link} from "expo-router";
 import {KContainer} from "@/components/KContainer";

@@ -5,15 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2334eba2-8320-4b00-958b-689459424738" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/dashboard/(stacks)/PhysicsModulesScreen.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/KContainer.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/KSpacer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(auth)/LoginScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(auth)/LoginScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(auth)/RegisterScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(auth)/RegisterScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/dashboard/(stacks)/MainSceneScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/dashboard/(stacks)/MainSceneScreen.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/dashboard/(tabs)/HomeScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/dashboard/(tabs)/HomeScreen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/dashboard/(tabs)/SettingsScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/dashboard/(tabs)/SettingsScreen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/dashboard/(tabs)/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/dashboard/(tabs)/_layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/colors.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/styles/colors.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/screens/HomeScreen.styles.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/styles/screens/HomeScreen.styles.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/screens/index.styles.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/styles/screens/index.styles.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +88,9 @@
       <workItem from="1732917661172" duration="187000" />
       <workItem from="1732917858066" duration="359000" />
       <workItem from="1732918230851" duration="5070000" />
-      <workItem from="1732978633741" duration="1796000" />
+      <workItem from="1732978633741" duration="1914000" />
+      <workItem from="1732980562483" duration="367000" />
+      <workItem from="1732980948827" duration="341000" />
     </task>
     <servers />
   </component>

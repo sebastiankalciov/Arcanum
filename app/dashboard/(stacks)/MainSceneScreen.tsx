@@ -32,7 +32,6 @@ export default function MainSceneScreen() {
             }
         }
 
-
         return (
             <ViroARScene onTrackingUpdated={onInitialized}>
                 <ViroText

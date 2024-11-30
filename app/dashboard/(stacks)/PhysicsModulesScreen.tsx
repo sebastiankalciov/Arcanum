@@ -1,5 +1,5 @@
 import {Text, TouchableOpacity, View} from "react-native";
-import {styles} from "@/styles/screens/HomeScreen.styles";
+import {styles} from "@/styles/screens/PhysicsModulesScreen.styles";
 import {useFonts} from "expo-font";
 import {KContainer} from "@/components/KContainer";
 import Feather from '@expo/vector-icons/Feather';
@@ -19,14 +19,38 @@ export default function PhysicsModulesScreen() {
 
     return (
         <KContainer>
-            <TouchableOpacity>
-                <Link push href = "../(tabs)/HomeScreen">
-                    <Feather name="arrow-left-circle" size={30} color="white" />
-                </Link>
+            <View style = {{flexDirection: "row", maxWidth: "90%", gap: "30%", alignItems: "center"}}>
+                <TouchableOpacity>
+                    <Link push href = "../(tabs)/HomeScreen">
+                        <Feather name="arrow-left-circle" size={30} color="white" />
+                    </Link>
+                </TouchableOpacity>
+                <Text style = {styles.titleText}>Physics</Text>
+            </View>
+            <Text style = {styles.categoriesText}>Modules</Text>
+            <View style = {styles.contentContainer}>
+                <View style = {styles.moduleContainer}>
+                    <View style = {styles.progressPhysicsContainer}>
+                        <Text style = {styles.moduleTitle}>Newton's Laws of Motion</Text>
+                        <Text style = {styles.moduleText}>drop an apple</Text>
+                    </View>
+                </View>
+                <View style = {styles.moduleContainer}>
+                    <View style = {styles.progressPhysicsContainer}>
+                        <Text style = {styles.moduleTitle}>Electric and Magnetic Fields</Text>
+                        <Text style = {styles.moduleText}>idk sum scientific shit</Text>
 
-            </TouchableOpacity>
-            <Text style = {styles.categoriesText}>Featured modules</Text>
+                    </View>
+                </View>
 
+                <View style = {styles.moduleContainer}>
+                    <View style = {styles.progressPhysicsContainer}>
+                        <Text style = {styles.moduleTitle}>Wave Properties</Text>
+                        <Text style = {styles.moduleText}>crazy shit</Text>
+                    </View>
+                </View>
+
+            </View>
         </KContainer>
     )
 }

@@ -16,42 +16,36 @@ export const styles = StyleSheet.create({
         borderColor: Colors.primaryDarkContrast,
         borderRadius: 15,
     },
+    moduleContainer: {
+        flex: 1/3,
+        width: "100%",
+    },
     contentContainer: {
         flex: 1,
         alignItems: "center",
 
     },
-    subjectsContainer: {
-        gap: 30,
-        paddingTop: 10,
-        flexDirection: "row",
-    },
-    progressContainer: {
-        flex: 1/2,
-        width: "100%",
-    },
     progressPhysicsContainer: {
         padding: 10,
-        gap: "50%",
-        flex: 1,
-        alignItems: "center",
-        flexDirection: "row",
+        flex: 1/2,
         backgroundColor: Colors.lightContrast,
         borderRadius: 15,
         borderBottomWidth: 1.5,
         borderLeftWidth: 1.5,
+        borderRightWidth: 1.5,
+        borderEndWidth: 5,
         borderStartWidth: 5,
         borderColor: Colors.primaryDarkContrast
     },
-    progressSubjectTitle: {
+    moduleTitle: {
         fontSize: 20,
         color: Colors.primaryDark,
         fontWeight: "bold",
     },
-    progressStatsText: {
-        fontSize: 18,
+    moduleText: {
+        fontSize: 15,
         color: Colors.primaryDark,
-        fontWeight: "bold",
+
     },
     subjectText: {
         color: Colors.lightGrey,

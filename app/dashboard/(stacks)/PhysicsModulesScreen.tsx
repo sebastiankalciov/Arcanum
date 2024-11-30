@@ -1,10 +1,14 @@
-import {Text, TouchableOpacity, View} from "react-native";
+import {Text, TouchableOpacity, TouchableWithoutFeedback, View} from "react-native";
 import {styles} from "@/styles/screens/PhysicsModulesScreen.styles";
 import {useFonts} from "expo-font";
 import {KContainer} from "@/components/KContainer";
 import Feather from '@expo/vector-icons/Feather';
-import {Link} from "expo-router";
+import {Link, useRouter} from "expo-router";
+import {KModuleComponent} from "@/components/KModuleComponent";
+import {KSpacer} from "@/components/KSpacer";
 export default function PhysicsModulesScreen() {
+
+    const router = useRouter();
 
     const [fontsLoaded] = useFonts({
         'JetBrains-Bold': require('@/assets/fonts/JetBrains/JetBrainsMono-Bold.ttf'),
@@ -17,6 +21,9 @@ export default function PhysicsModulesScreen() {
         return <View/>
     }
 
+    const openARScene = (page: string) => {
+        router.push(`./${page}`);
+    }
     return (
         <KContainer>
             <View style = {{flexDirection: "row", maxWidth: "90%", gap: "30%", alignItems: "center"}}>
@@ -27,29 +34,16 @@ export default function PhysicsModulesScreen() {
                 </TouchableOpacity>
                 <Text style = {styles.titleText}>Physics</Text>
             </View>
+            <KSpacer size={10}/>
             <Text style = {styles.categoriesText}>Modules</Text>
+            <KSpacer size={20}/>
             <View style = {styles.contentContainer}>
-                <View style = {styles.moduleContainer}>
-                    <View style = {styles.progressPhysicsContainer}>
-                        <Text style = {styles.moduleTitle}>Newton's Laws of Motion</Text>
-                        <Text style = {styles.moduleText}>drop an apple</Text>
-                    </View>
-                </View>
-                <View style = {styles.moduleContainer}>
-                    <View style = {styles.progressPhysicsContainer}>
-                        <Text style = {styles.moduleTitle}>Electric and Magnetic Fields</Text>
-                        <Text style = {styles.moduleText}>idk sum scientific shit</Text>
 
-                    </View>
-                </View>
-
-                <View style = {styles.moduleContainer}>
-                    <View style = {styles.progressPhysicsContainer}>
-                        <Text style = {styles.moduleTitle}>Wave Properties</Text>
-                        <Text style = {styles.moduleText}>crazy shit</Text>
-                    </View>
-                </View>
-
+                    <TouchableWithoutFeedback onPress={() => {router.push('./MainScreenScreen')}}>
+                        <KModuleComponent title={"Newton's Laws of Motion"} description={"drop an apple\ndada\nunu"}/>
+                    </TouchableWithoutFeedback>
+                <KModuleComponent title={"Electric and Magnetic Fields"} description={"idk sum scientific shit"}/>
+                <KModuleComponent title={"Wave Properties"} description={"crazy shit"}/>
             </View>
         </KContainer>
     )

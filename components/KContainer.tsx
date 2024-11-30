@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
         flex: 1,
         paddingTop: 50,
         padding: 20,
-        gap: 20,
+        gap: 10,
         backgroundColor: Colors.primaryDark,
         fontFamily: 'JetBrains-Regular',
     }

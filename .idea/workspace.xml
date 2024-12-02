@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2334eba2-8320-4b00-958b-689459424738" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/components/KModuleComponent.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/dashboard/(stacks)/PhysicsModulesScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/dashboard/(stacks)/PhysicsModulesScreen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/KContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/KContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/dashboard/(stacks)/MainSceneScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/dashboard/(stacks)/MainSceneScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/dashboard/(tabs)/HomeScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/dashboard/(tabs)/HomeScreen.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,6 +91,10 @@
       <workItem from="1732982104000" duration="2784000" />
       <workItem from="1732984909890" duration="6891000" />
       <workItem from="1733002713893" duration="1759000" />
+      <workItem from="1733067351019" duration="795000" />
+      <workItem from="1733084559478" duration="2912000" />
+      <workItem from="1733088799530" duration="972000" />
+      <workItem from="1733167876034" duration="5246000" />
     </task>
     <servers />
   </component>

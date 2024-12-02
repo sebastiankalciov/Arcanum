@@ -35,7 +35,7 @@ export default function HomeScreen() {
             <View style = {styles.contentContainer}>
                 <View style = {styles.subjectsContainer}>
 
-                    <Link href = "../(stacks)/PhysicsModulesScreen">
+                    <Link href = "../(stacks)/MainSceneScreen">
                         <TouchableWithoutFeedback>
                             <KSubjectComponent icon={"rocket"} title={"Physics"}/>
                         </TouchableWithoutFeedback>

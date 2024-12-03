@@ -6,11 +6,12 @@ import {
     ViroFlexView, ViroSphere, ViroSpotLight, ViroText,
     ViroTrackingReason,
     ViroTrackingStateConstants,
-    ViroMaterials
+    ViroMaterials, Viro3DObject
 } from "@reactvision/react-viro";
 import {StyleSheet, View} from "react-native";
 import {Link, useRouter} from "expo-router";
 import React from "react";
+import {useAssets} from "expo-asset";
 
 export default function MainSceneScreen() {
 
@@ -19,10 +20,28 @@ export default function MainSceneScreen() {
     const exitAR = () => {
         router.back()
     }
+    const planetsGravity = {
+        "earth": -0.1,
+        "moon": -0.015,
+        "mars": -0.03,
+        "jupiter": -0.07
+    }
 
-    const HelloWorldSceneAR = () => {
+    const GravitySceneAR = () => {
 
-        const [text, setText] = useState("Initializing AR...");
+        let gravity = planetsGravity["earth"];
+
+        const setGravity = (planet: string) => {
+            // @ts-ignore
+            gravity = planetsGravity[planet];
+        }
+
+        const groundY = -3;
+        const sphereRadius = 0.14;
+        const initialSpherePosition = [0, 1.12, -2];
+        const [spherePosition, setSpherePosition] = useState(initialSpherePosition);
+
+        const [isAnimationPlaying, setIsAnimationPlaying] = useState(false);
 
         function onInitialized(state: any, reason: ViroTrackingReason) {
             console.log("guncelleme", state, reason);
@@ -32,15 +51,6 @@ export default function MainSceneScreen() {
                 console.log('test');
             }
         }
-
-        const gravity = -0.015;
-        const groundY = -3;
-        const sphereRadius = 0.1;
-        const initialSpherePosition = [0, 1.15, -2];
-        const [spherePosition, setSpherePosition] = useState(initialSpherePosition);
-
-        const [isAnimationPlaying, setIsAnimationPlaying] = useState(false);
-
 
         useEffect(() => {
             let interval: NodeJS.Timeout | null = null;
@@ -63,30 +73,26 @@ export default function MainSceneScreen() {
             };
         }, [isAnimationPlaying]);
 
-        ViroMaterials.createMaterials({
-            redMaterial: {
-                diffuseColor: "#eab330",
-            },
-            groundMaterial: {
-                diffuseColor: "#7f57c2",
-            },
-        });
-
         const startAnimation = () => {
             setSpherePosition(initialSpherePosition);
             setIsAnimationPlaying(true);
         }
 
-        const infoText = [
-            "test 1",
-            "test 2",
-            "test 3"
-        ];
+        ViroMaterials.createMaterials({
+            yellowMaterial: {
+                diffuseColor: "#eab330",
+            },
+        });
+
+        // TO-DO
+        // Add Input button to simulate the gravity on different planets
 
         return (
             <ViroARScene onTrackingUpdated={onInitialized}>
 
                 <ViroAmbientLight color="#ffffff" />
+
+                {/* light */}
                 <ViroSpotLight
                     innerAngle={5}
                     outerAngle={45}
@@ -96,12 +102,14 @@ export default function MainSceneScreen() {
                     castsShadow={true}
                 />
 
+                {/* sphere */}
                 <ViroSphere
                     radius={sphereRadius}
                     position={spherePosition}
-                    materials={["redMaterial"]}
+                    materials={["yellowMaterial"]}
                 />
 
+                {/* text card */}
                 <ViroFlexView
                     position={[2, 0.2, -2]}
                     rotation={[0, -45, 0]}
@@ -115,63 +123,96 @@ export default function MainSceneScreen() {
                     }}
                 >
 
-                    {infoText.map((paragraph, index) => (
-                        <ViroText
-                            key={`paragraph-${index}`}
-                            text={paragraph}
-                            style={{
-                                fontFamily: "Arial",
-                                fontSize: 20,
-                                color: "#333333",
-                                textAlign: "left",
-                                textAlignVertical: "top",
-                            }}
-                            width={2.3}
-                            height={0.4}
-                        />
-                    ))}
+                    <ViroText
+                        text={"Test 1 - yada yad adadadadadad"}
+                        style={{
+                            fontFamily: "Arial",
+                            fontSize: 10,
+                            color: "#333333",
+                        }}
+                        width={2.3}
+                        height={0.4}
+                    />
+                    
                 </ViroFlexView>
 
+                {/* earth planet label & button*/}
+                <ViroText
+                    text={"Earth"}
+                    style={{
+                        fontFamily: "Arial",
+                        fontSize: 20,
+                        color: "#247cd5",
+                    }}
+                    rotation={[0, 45, 0]}
+                    position={[-0.8, 0.3, -2]}
+                    width={2}
+                    height={0.4}
+                    onClick={setGravity("earth")}
+                />
+                <ViroButton
+                    source={require("@/assets/images/planets/earth.png")}
+                    position={[-2, 0.2, -2]}
+                    rotation={[0, 45, 0]}
+                    height={0.5}
+                    width={0.5}
+                />
+
+                {/* moon label & button*/}
+                <ViroText
+                    text={"Moon"}
+                    style={{
+                        fontFamily: "Arial",
+                        fontSize: 20,
+                        color: "#247cd5",
+                    }}
+                    rotation={[0, 45, 0]}
+                    position={[-1.8, 0.3, -2]}
+                    width={2}
+                    height={0.4}
+                    onClick={setGravity("moon")}
+                />
+                <ViroButton
+                    source={require("@/assets/images/planets/moon.png")}
+                    position={[-3, 0.2, -2]}
+                    rotation={[0, 80, 0]}
+                    height={0.5}
+                    width={0.5}
+                />
+
+                {/* exit & play button */}
                 <ViroButton
                     source={require("@/assets/images/exit-button.png")}
-                    position={[0, -1.4, -1]}
+                    position={[0, -1.4, -1.3]}
                     rotation={[-45, 0, 0]}
                     height={0.2}
                     width={0.5}
                     onClick={exitAR}
                 />
-
                 <ViroButton
                     source={require("@/assets/images/start-button.png")}
-                    position={[0, -1, -1]}
+                    position={[0, -1, -1.3]}
                     rotation={[-45, 0, 0]}
                     height={0.3}
                     width={0.3}
                     onClick={startAnimation}
                 />
+
             </ViroARScene>
-
         );
-
     }
 
     return (
         <ViroARSceneNavigator
             autofocus={true}
             initialScene={{
-                scene: HelloWorldSceneAR,
+                scene: GravitySceneAR,
             }}
-            style={styles.f1}>
+            style={styles.sceneContainer}>
         </ViroARSceneNavigator>
     );
 }
 
 const styles = StyleSheet.create({
-    f1: { flex: 1 },
-    helloWorldTextStyle: {
-        fontSize: 35,
-        color: "#f92929",
-        textAlignVertical: "center",
-        textAlign: "center",
-    },
+    sceneContainer: { flex: 1 },
 });

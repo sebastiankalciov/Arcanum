@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2334eba2-8320-4b00-958b-689459424738" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/dashboard/(stacks)/MainSceneScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/dashboard/(stacks)/MainSceneScreen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/dashboard/(tabs)/HomeScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/dashboard/(tabs)/HomeScreen.tsx" afterDir="false" />
-    </list>
+    <list default="true" id="2334eba2-8320-4b00-958b-689459424738" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -94,7 +90,19 @@
       <workItem from="1733067351019" duration="795000" />
       <workItem from="1733084559478" duration="2912000" />
       <workItem from="1733088799530" duration="972000" />
-      <workItem from="1733167876034" duration="5246000" />
+      <workItem from="1733167876034" duration="6268000" />
+      <workItem from="1733221834508" duration="615000" />
+      <workItem from="1733226061031" duration="529000" />
+      <workItem from="1733226694218" duration="625000" />
+      <workItem from="1733230204366" duration="2101000" />
+      <workItem from="1733232507369" duration="330000" />
+      <workItem from="1733232852095" duration="263000" />
+      <workItem from="1733233126146" duration="254000" />
+      <workItem from="1733233391943" duration="29000" />
+      <workItem from="1733233437285" duration="157000" />
+      <workItem from="1733233604269" duration="562000" />
+      <workItem from="1733254466932" duration="3542000" />
+      <workItem from="1733258026098" duration="2789000" />
     </task>
     <servers />
   </component>

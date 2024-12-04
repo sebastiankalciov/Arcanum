@@ -8,11 +8,11 @@ import {
     ViroTrackingStateConstants,
     ViroMaterials, Viro3DObject
 } from "@reactvision/react-viro";
-import {StyleSheet, View} from "react-native";
+import {Text, Button, StyleSheet, TouchableOpacity, View} from "react-native";
 import {Link, useRouter} from "expo-router";
 import React from "react";
-import {useAssets} from "expo-asset";
-
+import Feather from '@expo/vector-icons/Feather';
+import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 export default function MainSceneScreen() {
 
     const router = useRouter();
@@ -26,7 +26,10 @@ export default function MainSceneScreen() {
         "mars": -0.03,
         "jupiter": -0.07
     }
-
+    // TO-DO
+    // - implement interaction with planets, drag and drop (move planets)
+    // - make the play & exit buttons static - semi transparent, on the button of the screen
+    
     const GravitySceneAR = () => {
 
         let gravity = planetsGravity["earth"];
@@ -197,22 +200,65 @@ export default function MainSceneScreen() {
                     width={0.3}
                     onClick={startAnimation}
                 />
-
             </ViroARScene>
         );
     }
 
     return (
-        <ViroARSceneNavigator
-            autofocus={true}
-            initialScene={{
-                scene: GravitySceneAR,
-            }}
-            style={styles.sceneContainer}>
-        </ViroARSceneNavigator>
+            <View style = {styles.container}>
+
+                <ViroARSceneNavigator
+                    autofocus={true}
+                    initialScene={{
+                        scene: GravitySceneAR,
+                    }}
+                    style={styles.sceneContainer}>
+
+                </ViroARSceneNavigator>
+
+                <View style = {styles.navigationContainer}>
+                    <View style = {styles.buttonContainer}>
+                        <TouchableOpacity>
+                            <Feather name="play-circle" size={40} style = {styles.playIcon}/>
+                        </TouchableOpacity>
+                    </View>
+
+                    <View style = {styles.buttonContainer}>
+                        <TouchableOpacity onPress={exitAR}>
+                            <MaterialIcons name="exit-to-app" size={40} style = {styles.exitIcon}/>
+                        </TouchableOpacity>
+                    </View>
+                </View>
+            </View>
     );
 }
 
 const styles = StyleSheet.create({
-    sceneContainer: { flex: 1 },
+    container: {
+        flex: 1,
+    },
+    sceneContainer: {
+        flex: 1
+    },
+    navigationContainer: {
+        gap: 60,
+        flexDirection: "row",
+        position: "absolute",
+        bottom: 50,
+        left: "25%",
+        justifyContent: "center",
+        alignItems: "center"
+    },
+    buttonContainer: {
+        backgroundColor: "#d4d4d4",
+        opacity: 0.9,
+        borderRadius: 30,
+        padding: 10,
+    },
+    playIcon: {
+        color: "#5fa8f8"
+    },
+    exitIcon: {
+        color: "#262626"
+    }
 });

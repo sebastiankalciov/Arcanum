@@ -26,6 +26,7 @@ export default function MainSceneScreen() {
         "mars": -0.03,
         "jupiter": -0.07
     }
+    
     // TO-DO
     // - implement interaction with planets, drag and drop (move planets)
     // - make the play & exit buttons static - semi transparent, on the button of the screen

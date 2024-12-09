@@ -40,6 +40,8 @@ export const styles = StyleSheet.create({
         borderRadius: 15,
         borderBottomWidth: 1.5,
         borderLeftWidth: 1.5,
+        borderRightWidth: 1.5,
+        borderEndWidth: 5,
         borderStartWidth: 5,
         borderColor: Colors.primaryDarkContrast
     },

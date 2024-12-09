@@ -1,4 +1,4 @@
-import {Text, TouchableOpacity, TouchableWithoutFeedback, View} from "react-native";
+import {ScrollView, Text, TouchableOpacity, TouchableWithoutFeedback, View} from "react-native";
 import {styles} from "@/styles/screens/PhysicsModulesScreen.styles";
 import {useFonts} from "expo-font";
 import {KContainer} from "@/components/KContainer";
@@ -6,6 +6,18 @@ import Feather from '@expo/vector-icons/Feather';
 import {Link, useRouter} from "expo-router";
 import {KModuleComponent} from "@/components/KModuleComponent";
 import {KSpacer} from "@/components/KSpacer";
+
+const descriptions = {"gravity": "\n" +
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit." +
+        "Nunc et iaculis urna. In nec ligula ut arcu faucibus consequat at eu ligula.",
+        "electrics": "\n" +
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit." +
+        "Nunc et iaculis urna. In nec ligula ut arcu faucibus consequat at eu ligula.",
+        "wave": "\n" +
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit." +
+        "Nunc et iaculis urna. In nec ligula ut arcu faucibus consequat at eu ligula."
+
+}
 export default function PhysicsModulesScreen() {
 
     const router = useRouter();
@@ -21,9 +33,6 @@ export default function PhysicsModulesScreen() {
         return <View/>
     }
 
-    const openARScene = (page: string) => {
-        router.push(`./${page}`);
-    }
     return (
         <KContainer>
             <View style = {{flexDirection: "row", maxWidth: "90%", gap: "30%", alignItems: "center"}}>
@@ -39,11 +48,26 @@ export default function PhysicsModulesScreen() {
             <KSpacer size={20}/>
             <View style = {styles.contentContainer}>
 
-                    <TouchableWithoutFeedback onPress={() => {router.push('./MainScreenScreen')}}>
-                        <KModuleComponent title={"Newton's Laws of Motion"} description={"drop an apple\ndada\nunu"}/>
-                    </TouchableWithoutFeedback>
-                <KModuleComponent title={"Electric and Magnetic Fields"} description={"idk sum scientific shit"}/>
-                <KModuleComponent title={"Wave Properties"} description={"crazy shit"}/>
+                <TouchableWithoutFeedback>
+                    <Link href = "./MainSceneScreen">
+                        <KModuleComponent title={"Gravity"} description={descriptions.gravity}/>
+                    </Link>
+                </TouchableWithoutFeedback>
+
+
+                <TouchableOpacity>
+                    <Link href = "./MainSceneScreen">
+                        <KModuleComponent title={"Electric and Magnetic Fields"} description={descriptions.electrics}/>
+                    </Link>
+                </TouchableOpacity>
+
+
+                <TouchableWithoutFeedback>
+                    <Link href = "./MainSceneScreen">
+                        <KModuleComponent title={"Wave Properties"} description={descriptions.wave}/>
+                    </Link>
+                </TouchableWithoutFeedback>
+
             </View>
         </KContainer>
     )

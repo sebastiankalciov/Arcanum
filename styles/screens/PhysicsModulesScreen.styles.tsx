@@ -17,17 +17,16 @@ export const styles = StyleSheet.create({
         borderRadius: 15,
     },
     moduleContainer: {
-        flex: 1/3,
         width: "100%",
     },
     contentContainer: {
         flex: 1,
+        gap: 30,
         alignItems: "center",
 
     },
     progressPhysicsContainer: {
         padding: 10,
-        flex: 1/2,
         backgroundColor: Colors.lightContrast,
         borderRadius: 15,
         borderBottomWidth: 1.5,
@@ -45,7 +44,6 @@ export const styles = StyleSheet.create({
     moduleText: {
         fontSize: 15,
         color: Colors.primaryDark,
-
     },
     subjectText: {
         color: Colors.lightGrey,

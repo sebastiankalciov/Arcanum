@@ -6,10 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2334eba2-8320-4b00-958b-689459424738" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/dashboard/(stacks)/PhysicsModulesScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/dashboard/(stacks)/PhysicsModulesScreen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/dashboard/(tabs)/HomeScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/dashboard/(tabs)/HomeScreen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/screens/HomeScreen.styles.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/styles/screens/HomeScreen.styles.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/screens/PhysicsModulesScreen.styles.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/styles/screens/PhysicsModulesScreen.styles.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +114,8 @@
       <workItem from="1733515747242" duration="425000" />
       <workItem from="1733600076427" duration="7000" />
       <workItem from="1733743236348" duration="1272000" />
-      <workItem from="1733744521036" duration="1193000" />
+      <workItem from="1733744521036" duration="1393000" />
+      <workItem from="1733774039876" duration="2060000" />
     </task>
     <servers />
   </component>

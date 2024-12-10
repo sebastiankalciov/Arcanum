@@ -1,18 +1,25 @@
 import {useEffect, useState} from "react";
 import {
-    ViroAmbientLight, ViroARPlane,
+    ViroAmbientLight,
     ViroARScene,
-    ViroARSceneNavigator, ViroBox, ViroButton,
+    ViroARSceneNavigator, ViroButton,
     ViroFlexView, ViroSphere, ViroSpotLight, ViroText,
     ViroTrackingReason,
-    ViroTrackingStateConstants,
-    ViroMaterials, Viro3DObject
+    ViroMaterials,
 } from "@reactvision/react-viro";
-import {Text, Button, StyleSheet, TouchableOpacity, View} from "react-native";
-import {Link, useRouter} from "expo-router";
+import {StyleSheet, TouchableOpacity, View} from "react-native";
+import {useRouter} from "expo-router";
 import React from "react";
 import Feather from '@expo/vector-icons/Feather';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
+
+const planetsGravity = {
+    "earth": -0.15,
+    "moon": -0.015,
+    "mars": -0.03,
+    "jupiter": -0.07
+}
+
 export default function MainSceneScreen() {
 
     const router = useRouter();
@@ -20,52 +27,34 @@ export default function MainSceneScreen() {
     const exitAR = () => {
         router.back()
     }
-    const planetsGravity = {
-        "earth": -0.1,
-        "moon": -0.015,
-        "mars": -0.03,
-        "jupiter": -0.07
-    }
-    
-    // TO-DO
-    // - implement interaction with planets, drag and drop (move planets)
-    // - make the play & exit buttons static - semi transparent, on the button of the screen
-    
+
     const GravitySceneAR = () => {
 
-        let gravity = planetsGravity["earth"];
-
-        const setGravity = (planet: string) => {
-            // @ts-ignore
-            gravity = planetsGravity[planet];
-        }
+        const [isAnimationPlaying, setIsAnimationPlaying] = useState<boolean>(false);
+        const initialSpherePosition = [0, 1.12, -2];
+        const [spherePosition, setSpherePosition] = useState<number[]>([0, 1.12, -2]);
+        const [gravity, setGravity] = useState(planetsGravity.earth);
 
         const groundY = -3;
-        const sphereRadius = 0.14;
-        const initialSpherePosition = [0, 1.12, -2];
-        const [spherePosition, setSpherePosition] = useState(initialSpherePosition);
+        const sphereRadius = 0.16;
 
-        const [isAnimationPlaying, setIsAnimationPlaying] = useState(false);
+        const startAnimation = () => {
+            setSpherePosition(initialSpherePosition);
+            setIsAnimationPlaying(true);
 
-        function onInitialized(state: any, reason: ViroTrackingReason) {
-            console.log("guncelleme", state, reason);
-            if (state === ViroTrackingStateConstants.TRACKING_NORMAL) {
-                console.log('AR initialized');
-            } else if (state === ViroTrackingStateConstants.TRACKING_UNAVAILABLE) {
-                console.log('test');
-            }
-        }
+        };
 
         useEffect(() => {
             let interval: NodeJS.Timeout | null = null;
 
             if (isAnimationPlaying) {
+                console.log(gravity);
                 interval = setInterval(() => {
                     setSpherePosition(([x, y, z]) => {
                         if (y - sphereRadius >= groundY) {
-
                             return [x, y + gravity, z];
                         }
+
                         setIsAnimationPlaying(false);
                         return [x, groundY + sphereRadius, z];
                     });
@@ -73,23 +62,20 @@ export default function MainSceneScreen() {
             }
 
             return () => {
+                console.log("animation clear interval")
                 if (interval) clearInterval(interval);
             };
         }, [isAnimationPlaying]);
 
-        const startAnimation = () => {
-            setSpherePosition(initialSpherePosition);
-            setIsAnimationPlaying(true);
-        }
+        const onInitialized = (state: any, reason: ViroTrackingReason) => {
+            console.log("AR Tracking:", state, reason);
+        };
 
         ViroMaterials.createMaterials({
             yellowMaterial: {
                 diffuseColor: "#eab330",
             },
         });
-
-        // TO-DO
-        // Add Input button to simulate the gravity on different planets
 
         return (
             <ViroARScene onTrackingUpdated={onInitialized}>
@@ -152,7 +138,7 @@ export default function MainSceneScreen() {
                     position={[-0.8, 0.3, -2]}
                     width={2}
                     height={0.4}
-                    onClick={setGravity("earth")}
+                    onClick={() => setGravity(planetsGravity.earth)}
                 />
                 <ViroButton
                     source={require("@/assets/images/planets/earth.png")}
@@ -174,7 +160,7 @@ export default function MainSceneScreen() {
                     position={[-1.8, 0.3, -2]}
                     width={2}
                     height={0.4}
-                    onClick={setGravity("moon")}
+                    onClick={() => setGravity(planetsGravity.moon)}
                 />
                 <ViroButton
                     source={require("@/assets/images/planets/moon.png")}
@@ -184,15 +170,7 @@ export default function MainSceneScreen() {
                     width={0.5}
                 />
 
-                {/* exit & play button */}
-                <ViroButton
-                    source={require("@/assets/images/exit-button.png")}
-                    position={[0, -1.4, -1.3]}
-                    rotation={[-45, 0, 0]}
-                    height={0.2}
-                    width={0.5}
-                    onClick={exitAR}
-                />
+                {/* play button */}
                 <ViroButton
                     source={require("@/assets/images/start-button.png")}
                     position={[0, -1, -1.3]}
@@ -211,19 +189,13 @@ export default function MainSceneScreen() {
                 <ViroARSceneNavigator
                     autofocus={true}
                     initialScene={{
-                        scene: GravitySceneAR,
+                        scene: GravitySceneAR
                     }}
                     style={styles.sceneContainer}>
 
                 </ViroARSceneNavigator>
 
                 <View style = {styles.navigationContainer}>
-                    <View style = {styles.buttonContainer}>
-                        <TouchableOpacity>
-                            <Feather name="play-circle" size={40} style = {styles.playIcon}/>
-                        </TouchableOpacity>
-                    </View>
-
                     <View style = {styles.buttonContainer}>
                         <TouchableOpacity onPress={exitAR}>
                             <MaterialIcons name="exit-to-app" size={40} style = {styles.exitIcon}/>
@@ -242,11 +214,10 @@ const styles = StyleSheet.create({
         flex: 1
     },
     navigationContainer: {
-        gap: 60,
         flexDirection: "row",
         position: "absolute",
         bottom: 50,
-        left: "25%",
+        left: "20%",
         justifyContent: "center",
         alignItems: "center"
     },

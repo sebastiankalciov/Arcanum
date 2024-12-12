@@ -65,7 +65,7 @@ export const styles = StyleSheet.create({
         color: Colors.white
     },
     subtitleText: {
-        paddingBottom: 30,
+        paddingBottom: 5,
         fontSize: 15,
         color: Colors.lightGrey
     },

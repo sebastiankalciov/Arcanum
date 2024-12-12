@@ -29,6 +29,7 @@ export default function HomeScreen() {
             </View>
 
             <Text style = {styles.subtitleText}>Prepared for a new challenge?</Text>
+            <Text style = {styles.subtitleText}>Press on a subject to <Text style = {{fontWeight: "bold", color: "#fff"}}>start</Text></Text>
 
             <Text style = {styles.categoriesText}>Subjects</Text>
 

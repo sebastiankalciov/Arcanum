@@ -5,11 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2334eba2-8320-4b00-958b-689459424738" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/handlers/ProgressHandler.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/screens/ar-scenes/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/dashboard/(stacks)/MainSceneScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/dashboard/(stacks)/MainSceneScreen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firebase/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/firebase/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/dashboard/(stacks)/MainSceneScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/dashboard/(stacks)/(physics-scenes)/GravitySceneScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/dashboard/(stacks)/PhysicsModulesScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/dashboard/(stacks)/PhysicsModulesScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/dashboard/(tabs)/HomeScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/dashboard/(tabs)/HomeScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/screens/HomeScreen.styles.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/styles/screens/HomeScreen.styles.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/screens/PhysicsModulesScreen.styles.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/styles/screens/PhysicsModulesScreen.styles.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,22 +43,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/seb/Desktop/Theseus",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "/home/seb/Desktop/Arcanum/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/seb/Desktop/Arcanum&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/home/seb/Desktop/Arcanum/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/dashboard/(stacks)/(physics-scenes)" />
       <recent name="$PROJECT_DIR$/app/(dashboard)/(stacks)" />
       <recent name="$PROJECT_DIR$/app/(dashboard)/(tabs)" />
     </key>
@@ -120,6 +127,9 @@
       <workItem from="1733744521036" duration="1393000" />
       <workItem from="1733774039876" duration="2060000" />
       <workItem from="1733834256057" duration="11389000" />
+      <workItem from="1733858086154" duration="372000" />
+      <workItem from="1733996060828" duration="1333000" />
+      <workItem from="1733997408035" duration="631000" />
     </task>
     <servers />
   </component>

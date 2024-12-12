@@ -45,11 +45,13 @@ export default function PhysicsModulesScreen() {
             </View>
             <KSpacer size={10}/>
             <Text style = {styles.categoriesText}>Modules</Text>
+
+            <Text style = {styles.subtitleText}>Press on a category to enter the AR world</Text>
             <KSpacer size={20}/>
             <View style = {styles.contentContainer}>
 
                 <TouchableWithoutFeedback>
-                    <Link href = "./MainSceneScreen">
+                    <Link href = "./(physics-scenes)/GravitySceneScreen">
                         <KModuleComponent title={"Gravity"} description={descriptions.gravity}/>
                     </Link>
                 </TouchableWithoutFeedback>

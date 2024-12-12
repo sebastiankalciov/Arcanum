@@ -7,11 +7,14 @@ import {
     ViroTrackingReason,
     ViroMaterials,
 } from "@reactvision/react-viro";
-import {StyleSheet, TouchableOpacity, View} from "react-native";
+import {TouchableOpacity, View} from "react-native";
 import {useRouter} from "expo-router";
 import React from "react";
-import Feather from '@expo/vector-icons/Feather';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
+import {styles} from "@/styles/screens/ar-scenes";
+
+// number - smaller => object falls faster
+// number - bigger => object falls slower
 
 const planetsGravity = {
     "earth": -0.15,
@@ -20,7 +23,7 @@ const planetsGravity = {
     "jupiter": -0.07
 }
 
-export default function MainSceneScreen() {
+export default function GravitySceneScreen() {
 
     const router = useRouter();
 
@@ -31,8 +34,8 @@ export default function MainSceneScreen() {
     const GravitySceneAR = () => {
 
         const [isAnimationPlaying, setIsAnimationPlaying] = useState<boolean>(false);
-        const initialSpherePosition = [0, 1.12, -2];
-        const [spherePosition, setSpherePosition] = useState<number[]>([0, 1.12, -2]);
+        const initialSpherePosition: [number, number, number] = [0, 1.12, -2];
+        let [spherePosition, setSpherePosition] = useState<[number, number, number]>([0, 1.12, -2]);
         const [gravity, setGravity] = useState(planetsGravity.earth);
 
         const groundY = -3;
@@ -205,32 +208,3 @@ export default function MainSceneScreen() {
             </View>
     );
 }
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-    },
-    sceneContainer: {
-        flex: 1
-    },
-    navigationContainer: {
-        flexDirection: "row",
-        position: "absolute",
-        bottom: 50,
-        left: "20%",
-        justifyContent: "center",
-        alignItems: "center"
-    },
-    buttonContainer: {
-        backgroundColor: "#d4d4d4",
-        opacity: 0.9,
-        borderRadius: 30,
-        padding: 10,
-    },
-    playIcon: {
-        color: "#5fa8f8"
-    },
-    exitIcon: {
-        color: "#262626"
-    }
-});

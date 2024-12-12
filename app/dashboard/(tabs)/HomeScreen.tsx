@@ -28,8 +28,10 @@ export default function HomeScreen() {
                 <MaterialIcons name="waving-hand" size={24} color="#a66cfc" />
             </View>
 
-            <Text style = {styles.subtitleText}>Prepared for a new challenge?</Text>
-            <Text style = {styles.subtitleText}>Press on a subject to <Text style = {{fontWeight: "bold", color: "#fff"}}>start</Text></Text>
+            <Text style = {styles.subtitleText}>
+                Prepared for a new challenge?
+                Press on a subject to <Text style = {{fontWeight: "bold", color: "#fff"}}>start</Text>
+            </Text>
 
             <Text style = {styles.categoriesText}>Subjects</Text>
 

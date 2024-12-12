@@ -19,7 +19,6 @@ export const styles = StyleSheet.create({
     contentContainer: {
         flex: 1,
         alignItems: "center",
-
     },
     subjectsContainer: {
         gap: 30,
@@ -65,7 +64,7 @@ export const styles = StyleSheet.create({
         color: Colors.white
     },
     subtitleText: {
-        paddingBottom: 5,
+        paddingBottom: 30,
         fontSize: 15,
         color: Colors.lightGrey
     },

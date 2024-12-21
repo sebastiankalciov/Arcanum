@@ -1,10 +1,15 @@
 import {ViroARSceneNavigator} from "@reactvision/react-viro";
 import {TouchableOpacity, View} from "react-native";
 import {useRouter} from "expo-router";
-import React from "react";
+import React, {useEffect} from "react";
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import {styles} from "@/styles/screens/ar-scenes";
 import {GravitySceneAR} from "@/components/ar-scenes/physics/GravitySceneAR";
+import {addProgress} from "@/utils/addProgress";
+import {auth} from "@/firebase/config";
+
+const MODULE = "PHYSICS";
+const LECTURE = "GRAVITY";
 
 export default function GravitySceneScreen() {
 
@@ -13,6 +18,13 @@ export default function GravitySceneScreen() {
     const exitAR = () => {
         router.back()
     }
+
+    useEffect(() => {
+        addProgress(`${auth.currentUser?.email}`, MODULE, LECTURE).then(r => {
+            console.log(r);
+        });
+    })
+
 
     return (
             <View style = {styles.container}>

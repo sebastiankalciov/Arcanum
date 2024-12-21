@@ -6,14 +6,17 @@ import Feather from '@expo/vector-icons/Feather';
 import {Link, useRouter} from "expo-router";
 import {KModuleComponent} from "@/components/KModuleComponent";
 import {KSpacer} from "@/components/KSpacer";
+import {computerProgress} from "@/utils/computeProgress";
+import {auth} from "@/firebase/config";
 
-const descriptions = {"gravity": "\n" +
+const descriptions = {
+    "gravity": "\n" +
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit." +
         "Nunc et iaculis urna. In nec ligula ut arcu faucibus consequat at eu ligula.",
-        "electrics": "\n" +
+    "electrics": "\n" +
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit." +
         "Nunc et iaculis urna. In nec ligula ut arcu faucibus consequat at eu ligula.",
-        "wave": "\n" +
+    "wave": "\n" +
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit." +
         "Nunc et iaculis urna. In nec ligula ut arcu faucibus consequat at eu ligula."
 
@@ -32,6 +35,7 @@ export default function PhysicsModulesScreen() {
     if (!fontsLoaded) {
         return <View/>
     }
+
 
     return (
         <KContainer>

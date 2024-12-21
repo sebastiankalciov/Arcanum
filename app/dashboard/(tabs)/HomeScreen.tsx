@@ -7,6 +7,8 @@ import {Link} from "expo-router";
 import {KContainer} from "@/components/KContainer";
 import {KSpacer} from "@/components/KSpacer";
 import {Colors} from "@/styles";
+import {computeProgress, computerProgress} from "@/utils/computeProgress";
+import {auth} from "@/firebase/config";
 
 export default function HomeScreen() {
 
@@ -20,6 +22,8 @@ export default function HomeScreen() {
     if (!fontsLoaded) {
         return <View/>
     }
+
+    const physicsProgress = computeProgress(`${auth.currentUser?.email}`, "PHYSICS");
 
     return (
         <KContainer>
@@ -56,7 +60,7 @@ export default function HomeScreen() {
                 <View style = {styles.progressContainer}>
                     <View style = {styles.progressPhysicsContainer}>
                         <Text style = {styles.progressSubjectTitle}>Physics</Text>
-                        <Text style = {styles.progressStatsText}>60%</Text>
+                        <Text style = {styles.progressStatsText}>{physicsProgress}%</Text>
                     </View>
                 </View>
 

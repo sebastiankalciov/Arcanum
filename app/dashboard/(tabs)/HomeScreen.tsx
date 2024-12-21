@@ -5,12 +5,21 @@ import {useFonts} from "expo-font";
 import {KSubjectComponent} from "@/components/KSubjectComponent";
 import {Link} from "expo-router";
 import {KContainer} from "@/components/KContainer";
-import {KSpacer} from "@/components/KSpacer";
-import {Colors} from "@/styles";
-import {computeProgress, computerProgress} from "@/utils/computeProgress";
+import {computeProgress} from "@/utils/computeProgress";
 import {auth} from "@/firebase/config";
+import {useEffect, useState} from "react";
 
 export default function HomeScreen() {
+    const [physicsProgress, setPhysicsProgress] = useState<number | null>(null);
+
+    const fetchProgress = async () => {
+        const progress = await computeProgress(`${auth.currentUser?.email}`, "PHYSICS");
+        setPhysicsProgress(progress);
+    };
+
+    useEffect(() => {
+        fetchProgress();
+    }, []);
 
     const [fontsLoaded] = useFonts({
         'JetBrains-Bold': require('@/assets/fonts/JetBrains/JetBrainsMono-Bold.ttf'),
@@ -22,8 +31,6 @@ export default function HomeScreen() {
     if (!fontsLoaded) {
         return <View/>
     }
-
-    const physicsProgress = computeProgress(`${auth.currentUser?.email}`, "PHYSICS");
 
     return (
         <KContainer>
@@ -60,7 +67,7 @@ export default function HomeScreen() {
                 <View style = {styles.progressContainer}>
                     <View style = {styles.progressPhysicsContainer}>
                         <Text style = {styles.progressSubjectTitle}>Physics</Text>
-                        <Text style = {styles.progressStatsText}>{physicsProgress}%</Text>
+                        <Text style = {styles.progressStatsText}>{physicsProgress !== null ? `${physicsProgress}%` : "Loading..."}</Text>
                     </View>
                 </View>
 

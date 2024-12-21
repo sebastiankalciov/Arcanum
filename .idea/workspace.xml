@@ -5,12 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2334eba2-8320-4b00-958b-689459424738" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/utils/addProgress.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/dashboard/(stacks)/(physics-scenes)/GravitySceneScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/dashboard/(stacks)/(physics-scenes)/GravitySceneScreen.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/dashboard/(stacks)/PhysicsModulesScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/dashboard/(stacks)/PhysicsModulesScreen.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/dashboard/(tabs)/HomeScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/dashboard/(tabs)/HomeScreen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/handlers/ProgressHandler.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ar-scenes/physics/GravitySceneAR.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ar-scenes/physics/GravitySceneAR.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/computeProgress.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/utils/computeProgress.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,7 +129,7 @@
       <workItem from="1733858086154" duration="372000" />
       <workItem from="1733996060828" duration="1333000" />
       <workItem from="1733997408035" duration="1591000" />
-      <workItem from="1734786507163" duration="3673000" />
+      <workItem from="1734786507163" duration="6941000" />
     </task>
     <servers />
   </component>

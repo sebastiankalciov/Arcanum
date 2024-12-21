@@ -6,13 +6,11 @@ import Feather from '@expo/vector-icons/Feather';
 import {Link, useRouter} from "expo-router";
 import {KModuleComponent} from "@/components/KModuleComponent";
 import {KSpacer} from "@/components/KSpacer";
-import {computerProgress} from "@/utils/computeProgress";
-import {auth} from "@/firebase/config";
 
 const descriptions = {
     "gravity": "\n" +
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit." +
-        "Nunc et iaculis urna. In nec ligula ut arcu faucibus consequat at eu ligula.",
+        "Learn the basics of gravity! Explore how objects fall," +
+        "understand gravitational force, and try an interactive simulation to see gravity in action",
     "electrics": "\n" +
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit." +
         "Nunc et iaculis urna. In nec ligula ut arcu faucibus consequat at eu ligula.",

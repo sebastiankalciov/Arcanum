@@ -12,6 +12,15 @@ import {planetsGravity} from "@/constants/planetsGravity";
 // number < -0.015 => object falls faster
 // number > -0.015 => object falls slower
 
+const info = "What is Gravity?\n" +
+    "Gravity is a force that pulls objects toward each other." +
+    "On Earth, it’s what causes objects to fall to the ground." +
+    "Everything with mass is affected by gravity, from tiny particles to entire planets," +
+    "and the force depends on the mass of the objects and the distance between them." +
+    "Earth’s Gravity\n" +
+    "Earth’s gravity keeps us and everything else grounded." +
+    "It pulls objects toward the center of the planet with a strength of about 9.8 meters per" +
+    "second squared (m/s²). This is why when you drop something, it always falls."
 export const GravitySceneAR = () => {
 
     const [isAnimationPlaying, setIsAnimationPlaying] = useState<boolean>(false);
@@ -87,25 +96,23 @@ export const GravitySceneAR = () => {
             <ViroFlexView
                 position={[2, 0.2, -2]}
                 rotation={[0, -45, 0]}
-                width={2.5}
+                width={3.5}
                 height={1.5}
                 style={{
                     backgroundColor: "#ffffff88",
                     borderRadius: 0.1,
-                    flexDirection: "column",
                     padding: 0.1,
                 }}
             >
 
                 <ViroText
-                    text={"Test 1 - yada yad adadadadadad"}
+                    text={info}
                     style={{
                         fontFamily: "Arial",
-                        fontSize: 10,
-                        color: "#333333",
+                        fontSize: 12,
+                        color: "#000000",
+                        width: 3.5
                     }}
-                    width={2.3}
-                    height={0.4}
                 />
 
             </ViroFlexView>

@@ -11,10 +11,17 @@ import {useEffect, useState} from "react";
 
 export default function HomeScreen() {
     const [physicsProgress, setPhysicsProgress] = useState<number | null>(null);
+    const [biologyProgress, setBiologyProgress] = useState<number | null>(null);
+    const [informaticsProgress, setInformaticsProgress] = useState<number | null>(null);
 
     const fetchProgress = async () => {
-        const progress = await computeProgress(`${auth.currentUser?.email}`, "PHYSICS");
-        setPhysicsProgress(progress);
+        const progressPhysics = await computeProgress(`${auth.currentUser?.email}`, "PHYSICS");
+        const progressBiology = await computeProgress(`${auth.currentUser?.email}`, "BIOLOGY");
+        const progressInformatics = await computeProgress(`${auth.currentUser?.email}`, "INFORMATICS");
+
+        setPhysicsProgress(progressPhysics);
+        setBiologyProgress(progressBiology);
+        setInformaticsProgress(progressInformatics);
     };
 
     useEffect(() => {
@@ -41,7 +48,7 @@ export default function HomeScreen() {
 
             <Text style = {styles.subtitleText}>
                 Prepared for a new challenge?
-                Press on a subject to <Text style = {{fontWeight: "bold", color: "#fff"}}>start</Text>
+                Press on a subject to start the experience
             </Text>
 
             <Text style = {styles.categoriesText}>Subjects</Text>
@@ -54,9 +61,17 @@ export default function HomeScreen() {
                             <KSubjectComponent icon={"rocket"} title={"Physics"}/>
                         </TouchableWithoutFeedback>
                     </Link>
+                    <Link href = "../(stacks)/BiologyModulesScreen">
+                        <TouchableWithoutFeedback>
+                            <KSubjectComponent icon={"cow"} title={"Biology"}/>
+                        </TouchableWithoutFeedback>
+                    </Link>
 
-                    <KSubjectComponent icon={"cow"} title={"Biology"}/>
-                    <KSubjectComponent icon={"computer"} title={"Informatics"}/>
+                    <Link href = "../(stacks)/InformaticsModulesScreen">
+                        <TouchableWithoutFeedback>
+                            <KSubjectComponent icon={"computer"} title={"Informatics"}/>
+                        </TouchableWithoutFeedback>
+                    </Link>
                 </View>
 
             </View>
@@ -74,14 +89,14 @@ export default function HomeScreen() {
                 <View style = {styles.progressContainer}>
                     <View style = {styles.progressPhysicsContainer}>
                         <Text style = {styles.progressSubjectTitle}>Biology</Text>
-                        <Text style = {styles.progressStatsText}>20%</Text>
+                        <Text style = {styles.progressStatsText}>{biologyProgress !== null ? `${biologyProgress}%` : "Loading..."}</Text>
                     </View>
                 </View>
 
                 <View style = {styles.progressContainer}>
                     <View style = {styles.progressPhysicsContainer}>
                         <Text style = {styles.progressSubjectTitle}>Infor....</Text>
-                        <Text style = {styles.progressStatsText}>69%</Text>
+                        <Text style = {styles.progressStatsText}>{informaticsProgress !== null ? `${informaticsProgress}%` : "Loading..."}</Text>
                     </View>
                 </View>
 

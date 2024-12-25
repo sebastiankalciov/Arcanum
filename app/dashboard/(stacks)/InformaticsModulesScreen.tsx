@@ -8,18 +8,16 @@ import {KModuleComponent} from "@/components/KModuleComponent";
 import {KSpacer} from "@/components/KSpacer";
 
 const descriptions = {
-    "gravity": "\n" +
-        "Learn the basics of gravity!\nExplore how objects fall, " +
-        "understand gravitational force, and try an interactive simulation to see gravity in action",
-    "electrics": "\n" +
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit." +
-        "Nunc et iaculis urna. In nec ligula ut arcu faucibus consequat at eu ligula.",
-    "wave": "\n" +
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit." +
-        "Nunc et iaculis urna. In nec ligula ut arcu faucibus consequat at eu ligula."
+    // implement let's say 5 blocks with lights and the user can click on them, and form
+    // binary numbers, and see their equivalent
+    "binary": "\n" +
+        "See how binary numbers work"
+
+    // or data structures, like stack and queue
+    // pop and push operations
 
 }
-export default function PhysicsModulesScreen() {
+export default function InformaticsModulesScreen() {
 
     const router = useRouter();
 
@@ -43,7 +41,7 @@ export default function PhysicsModulesScreen() {
                         <Feather name="arrow-left-circle" size={30} color="white" />
                     </Link>
                 </TouchableOpacity>
-                <Text style = {styles.titleText}>Physics</Text>
+                <Text style = {styles.titleText}>Biology</Text>
             </View>
             <KSpacer size={10}/>
             <Text style = {styles.categoriesText}>Modules</Text>
@@ -54,7 +52,7 @@ export default function PhysicsModulesScreen() {
 
                 <TouchableWithoutFeedback>
                     <Link href = "./(physics-scenes)/GravitySceneScreen">
-                        <KModuleComponent title={"Gravity"} description={descriptions.gravity}/>
+                        <KModuleComponent title={"Gravity"} description={descriptions.binary}/>
                     </Link>
                 </TouchableWithoutFeedback>
 

@@ -33,6 +33,8 @@ export default function HomeScreen() {
         'JetBrains-ExtraBold': require('@/assets/fonts/JetBrains/JetBrainsMono-ExtraBold.ttf'),
         'JetBrains-Regular': require('@/assets/fonts/JetBrains/JetBrainsMono-Regular.ttf'),
         'Inter-Regular': require('@/assets/fonts/Inter/Inter_18pt-Regular.ttf'),
+        'Inter-ExtraBold': require('@/assets/fonts/Inter/Inter_24pt-ExtraBold.ttf'),
+        'Inter-Bold': require('@/assets/fonts/Inter/Inter_24pt-Bold.ttf'),
     });
 
     if (!fontsLoaded) {
@@ -43,7 +45,7 @@ export default function HomeScreen() {
         <KContainer>
             <View style = {styles.textWithIconContainer}>
                 <Text style = {styles.titleText}>Good day, adventurer</Text>
-                <MaterialIcons name="waving-hand" size={24} color="#a66cfc" />
+                <MaterialIcons name="waving-hand" size={24} color="#d05151" />
             </View>
 
             <Text style = {styles.subtitleText}>
@@ -78,7 +80,6 @@ export default function HomeScreen() {
 
                 <Text style = {styles.categoriesText}>Your progress</Text>
 
-
                 <View style = {styles.progressContainer}>
                     <View style = {styles.progressPhysicsContainer}>
                         <Text style = {styles.progressSubjectTitle}>Physics</Text>
@@ -94,8 +95,8 @@ export default function HomeScreen() {
                 </View>
 
                 <View style = {styles.progressContainer}>
-                    <View style = {styles.progressPhysicsContainer}>
-                        <Text style = {styles.progressSubjectTitle}>Infor....</Text>
+                    <View style = {styles.progressInfoContainer}>
+                        <Text style = {styles.progressSubjectTitle}>Informatics</Text>
                         <Text style = {styles.progressStatsText}>{informaticsProgress !== null ? `${informaticsProgress}%` : "Loading..."}</Text>
                     </View>
                 </View>

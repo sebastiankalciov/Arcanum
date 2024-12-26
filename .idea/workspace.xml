@@ -5,11 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2334eba2-8320-4b00-958b-689459424738" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/dashboard/(stacks)/BiologyModulesScreen.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/dashboard/(stacks)/InformaticsModulesScreen.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/screens/AuthScreens.styles.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(auth)/LoginScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(auth)/LoginScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(auth)/RegisterScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(auth)/RegisterScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/dashboard/(stacks)/BiologyModulesScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/dashboard/(stacks)/BiologyModulesScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/dashboard/(stacks)/InformaticsModulesScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/dashboard/(stacks)/InformaticsModulesScreen.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/dashboard/(stacks)/PhysicsModulesScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/dashboard/(stacks)/PhysicsModulesScreen.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/dashboard/(tabs)/HomeScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/dashboard/(tabs)/HomeScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/dashboard/(tabs)/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/dashboard/(tabs)/_layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/KContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/KContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/colors.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/styles/colors.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/screens/HomeScreen.styles.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/styles/screens/HomeScreen.styles.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/screens/PhysicsModulesScreen.styles.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/styles/screens/PhysicsModulesScreen.styles.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/screens/index.styles.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/styles/screens/index.styles.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +73,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\seb\Desktop\Arcanum\styles\screens" />
       <recent name="$PROJECT_DIR$/app/dashboard/(stacks)/(physics-scenes)" />
       <recent name="$PROJECT_DIR$/app/(dashboard)/(stacks)" />
       <recent name="$PROJECT_DIR$/app/(dashboard)/(tabs)" />
@@ -131,7 +144,8 @@
       <workItem from="1733997408035" duration="1591000" />
       <workItem from="1734786507163" duration="7043000" />
       <workItem from="1734951358359" duration="27000" />
-      <workItem from="1735158840255" duration="6331000" />
+      <workItem from="1735158840255" duration="6422000" />
+      <workItem from="1735209378461" duration="12593000" />
     </task>
     <servers />
   </component>

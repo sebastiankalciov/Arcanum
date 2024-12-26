@@ -6,75 +6,51 @@ export const styles = StyleSheet.create({
         flex: 1,
         alignItems: "center",
         justifyContent: "center",
-        backgroundColor: Colors.primaryDark,
+        backgroundColor: Colors.primaryYellow,
     },
     titleContainer: {
         flex: 1/2,
         alignSelf: "center",
-
         justifyContent: "center"
     },
-    inputContainer: {
-
-        alignItems: 'center',
-        flexDirection: 'row',
-        borderWidth: 1.5,
-        borderColor: "#afafaf",
-        borderRadius: 10,
-        height: 50,
-        marginTop: 20,
-        margin: 10
-    },
-    signInButton: {
-
+    getStartedButton: {
         marginTop: 50,
         alignItems: "center",
         justifyContent: "center",
-        backgroundColor: "#a66cfc",
-        borderRadius: 10,
-        margin: 15
+        backgroundColor: Colors.lightYellowContrast,
+        borderRadius: 30,
+        flexDirection: "row",
     },
 
-    signInButtonText: {
-        color: "#000000",
-        fontWeight: "bold",
-        fontSize: 20,
-        padding: 10,
-    },
-    input: {
-        flex: 1,
-        paddingLeft: 30,
-        color: "#ffffff"
+    getStartedButtonText: {
+        color: "#353535",
+        fontFamily: "Inter-Bold",
+        fontSize: 22,
+        padding: 8,
+        marginHorizontal: 20,
     },
     icon: {
-        position: "absolute",
-        color: "#ffffff",
-        margin: 5
+        color: "#353535",
+        marginRight: 15
     },
     title: {
         paddingTop: 10,
-        fontSize: 35,
-        fontWeight: 'bold',
-        color: "#ffffff",
+        fontFamily: "Inter-ExtraBold",
+        fontSize: 45,
+        color: "#000000",
         textAlign: "center"
     },
     subtitle: {
         fontSize: 25,
-        color: "#ffffff",
+        color: "#262626",
+        fontFamily: "Inter-Regular",
         textAlign: "center"
     },
-    createAccountContainer: {
+    getStartedContainer: {
         alignSelf: "center",
         flexDirection: "row",
         justifyContent: "center",
         textAlign: "center",
-        color: "#ffffff"
+        color: "#ededed"
     },
-    dontHaveAccountText: {
-        color: "#ffffff"
-    },
-    createAccountText: {
-        color: "#a66cfc",
-        fontWeight: "bold"
-    }
 });

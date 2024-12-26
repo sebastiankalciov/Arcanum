@@ -3,7 +3,7 @@ import {Colors} from "@/styles";
 
 export const styles = StyleSheet.create({
     textWithIconContainer: {
-        gap: 10,
+        gap: 5,
         flexDirection: "row",
         alignItems: "center",
     },
@@ -27,40 +27,42 @@ export const styles = StyleSheet.create({
     },
     progressPhysicsContainer: {
         padding: 10,
-        backgroundColor: Colors.lightContrast,
+        backgroundColor: Colors.lightYellowContrast,
         borderRadius: 15,
         borderBottomWidth: 1.5,
         borderLeftWidth: 1.5,
         borderRightWidth: 1.5,
         borderEndWidth: 5,
         borderStartWidth: 5,
-        borderColor: Colors.primaryDarkContrast
+        borderColor: Colors.darkYellowContrast
     },
     moduleTitle: {
         fontSize: 20,
-        color: Colors.primaryDark,
+        color: Colors.darkGrey,
         fontWeight: "bold",
     },
     moduleText: {
         fontSize: 15,
-        color: Colors.primaryDark,
+        fontFamily: "Inter-Regular",
+        color: Colors.darkGrey,
     },
     subjectText: {
         color: Colors.lightGrey,
         fontWeight: "bold"
     },
     titleText: {
-        fontSize: 25,
-        fontWeight: "bold",
-        color: Colors.white
+        fontSize: 30,
+        fontFamily: "Inter-ExtraBold",
+        color: Colors.dark
     },
     subtitleText: {
         fontSize: 15,
-        color: Colors.lightGrey
+        fontFamily: "Inter-Regular",
+        color: Colors.darkGrey
     },
     categoriesText: {
         fontSize: 25,
-        fontWeight: "bold",
-        color: Colors.accentColor
+        fontFamily: "Inter-Bold",
+        color: Colors.darkGrey
     }
 });

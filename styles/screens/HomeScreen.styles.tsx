@@ -8,12 +8,12 @@ export const styles = StyleSheet.create({
         alignItems: "center",
     },
     iconContainer: {
-        padding:5,
-        backgroundColor: Colors.lightContrast,
+        padding: 5,
+        backgroundColor: Colors.lightYellowContrast,
         borderLeftWidth: 1.5,
         borderRightWidth: 1.5,
         borderBottomWidth: 4,
-        borderColor: Colors.primaryDarkContrast,
+        borderColor: Colors.darkYellowContrast,
         borderRadius: 15,
     },
     contentContainer: {
@@ -31,46 +31,61 @@ export const styles = StyleSheet.create({
     },
     progressPhysicsContainer: {
         padding: 10,
-        gap: "50%",
+        gap: "40%",
         flex: 1,
         alignItems: "center",
         flexDirection: "row",
-        backgroundColor: Colors.lightContrast,
+        backgroundColor: Colors.lightYellowContrast,
         borderRadius: 15,
         borderBottomWidth: 1.5,
         borderLeftWidth: 1.5,
         borderRightWidth: 1.5,
         borderEndWidth: 5,
         borderStartWidth: 5,
-        borderColor: Colors.primaryDarkContrast
+        borderColor: Colors.darkYellowContrast
+    },
+    progressInfoContainer: {
+        padding: 10,
+        gap: "25%",
+        flex: 1,
+        alignItems: "center",
+        flexDirection: "row",
+        backgroundColor: Colors.lightYellowContrast,
+        borderRadius: 15,
+        borderBottomWidth: 1.5,
+        borderLeftWidth: 1.5,
+        borderRightWidth: 1.5,
+        borderEndWidth: 5,
+        borderStartWidth: 5,
+        borderColor: Colors.darkYellowContrast
     },
     progressSubjectTitle: {
         fontSize: 20,
-        color: Colors.primaryDark,
-        fontWeight: "bold",
+        color: Colors.darkGrey,
+        fontFamily: "Inter-Bold",
     },
     progressStatsText: {
         fontSize: 18,
-        color: Colors.primaryDark,
-        fontWeight: "bold",
+        color: Colors.darkGrey,
+        fontFamily: "Inter-Bold",
     },
     subjectText: {
-        color: Colors.lightGrey,
-        fontWeight: "bold"
+        color: Colors.darkGrey,
+        fontFamily: "Inter-Bold",
     },
     titleText: {
         fontSize: 25,
-        fontWeight: "bold",
-        color: Colors.white
+        fontFamily: "Inter-ExtraBold",
+        color: Colors.dark
     },
     subtitleText: {
         paddingBottom: 30,
         fontSize: 15,
-        color: Colors.lightGrey
+        color: Colors.dark
     },
     categoriesText: {
         fontSize: 25,
-        fontWeight: "bold",
-        color: Colors.accentColor
+        fontFamily: "Inter-Bold",
+        color: Colors.darkGrey,
     }
 });

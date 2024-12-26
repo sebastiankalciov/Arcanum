@@ -8,7 +8,7 @@ export const KContainer = ({children}) => {
         <View style = {styles.container}>
             {children}
 
-            <StatusBar backgroundColor={Colors.primaryDark} />
+            <StatusBar backgroundColor={Colors.primaryYellow} style={"dark"}/>
         </View>
     )
 }
@@ -19,7 +19,6 @@ const styles = StyleSheet.create({
         paddingTop: 50,
         padding: 20,
         gap: 10,
-        backgroundColor: Colors.primaryDark,
-        fontFamily: 'JetBrains-Regular',
+        backgroundColor: Colors.primaryYellow,
     }
 })

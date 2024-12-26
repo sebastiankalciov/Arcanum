@@ -37,10 +37,10 @@ export default function PhysicsModulesScreen() {
 
     return (
         <KContainer>
-            <View style = {{flexDirection: "row", maxWidth: "90%", gap: "30%", alignItems: "center"}}>
+            <View style = {{flexDirection: "row", maxWidth: "90%", gap: "10%", alignItems: "center"}}>
                 <TouchableOpacity>
                     <Link push href = "../(tabs)/HomeScreen">
-                        <Feather name="arrow-left-circle" size={30} color="white" />
+                        <Feather name="arrow-left-circle" size={30} color="#000" />
                     </Link>
                 </TouchableOpacity>
                 <Text style = {styles.titleText}>Physics</Text>

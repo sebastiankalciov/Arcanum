@@ -8,7 +8,7 @@ import {
     View
 } from "react-native";
 import {useState} from "react";
-import {styles} from "@/styles/screens/index.styles";
+import {styles} from "@/styles/screens/AuthScreens.styles";
 import {StatusBar} from "expo-status-bar";
 import {Colors} from "@/styles";
 import {createUserWithEmailAndPassword, signInWithEmailAndPassword} from "@firebase/auth";
@@ -17,6 +17,7 @@ import {FirebaseError} from "@firebase/util";
 import {Entypo} from "@expo/vector-icons";
 import {Link} from "expo-router";
 import {doc, setDoc} from "@firebase/firestore";
+import {KSpacer} from "@/components/KSpacer";
 
 export default function RegisterScreen() {
     const [email, setEmail] = useState("");
@@ -55,12 +56,16 @@ export default function RegisterScreen() {
     return (
         <SafeAreaView style={styles.container}>
 
-            <StatusBar backgroundColor={Colors.primaryDark} />
+            <StatusBar backgroundColor={Colors.primaryYellow} style = "dark"/>
 
-            <KeyboardAvoidingView behavior = {Platform.OS === 'ios' ? 'padding': 'height'} style = {styles.titleContainer}>
+            <KeyboardAvoidingView behavior = {Platform.OS === 'ios' ? 'padding': 'height'} style = {styles.keyboardContainer}>
 
-                <Text style = {styles.title}>Hello, adventurer</Text>
-                <Text style = {styles.subtitle}>Ready to create an account?</Text>
+                <View style = {styles.titleContainer}>
+                    <Text style = {styles.firstPartTitle}>Hello,</Text>
+                    <Text style = {styles.title}>Adventurer</Text>
+                </View>
+                <KSpacer size={20} />
+                <Text style = {styles.subtitle}>Create an account to feel the AR learning experience</Text>
 
                 <View style = {styles.inputContainer}>
                     <TextInput
@@ -70,7 +75,7 @@ export default function RegisterScreen() {
                         autoCapitalize="none"
                         keyboardType="email-address"
                         placeholder="Enter your email"
-                        placeholderTextColor={"white"}
+                        placeholderTextColor={"#000"}
                     />
                     <Entypo style={styles.icon} name="email" size={20} />
                 </View>
@@ -82,7 +87,7 @@ export default function RegisterScreen() {
                         onChangeText={setPassword}
                         secureTextEntry
                         placeholder="Enter your password"
-                        placeholderTextColor={"white"}
+                        placeholderTextColor={"#000"}
                     />
                     <Entypo style={styles.icon} name="lock" size={20} />
                 </View>

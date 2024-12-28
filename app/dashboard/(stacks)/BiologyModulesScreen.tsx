@@ -8,9 +8,10 @@ import {KModuleComponent} from "@/components/KModuleComponent";
 import {KSpacer} from "@/components/KSpacer";
 
 const descriptions = {
-    "cow": "\n" +
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit." +
-        "Nunc et iaculis urna. In nec ligula ut arcu faucibus consequat at eu ligula.",
+    "cell": "\n" +
+        "View a detailed 3D model of a cell in augmented reality.\n\n" +
+        "Explore its structure by looking around and reading informative text about the " +
+        "different components, like the nucleus and mitochondria"
 
 }
 
@@ -48,8 +49,8 @@ export default function BiologyModulesScreen() {
             <View style = {styles.contentContainer}>
 
                 <TouchableWithoutFeedback>
-                    <Link href = "./(physics-scenes)/GravitySceneScreen">
-                        <KModuleComponent title={"Cow"} description={descriptions.cow}/>
+                    <Link href = "./(biology-scenes)/CellSceneScreen">
+                        <KModuleComponent title={"Cell"} description={descriptions.cell}/>
                     </Link>
                 </TouchableWithoutFeedback>
 

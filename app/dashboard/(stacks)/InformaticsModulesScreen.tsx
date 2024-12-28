@@ -50,8 +50,8 @@ export default function InformaticsModulesScreen() {
             <View style = {styles.contentContainer}>
 
                 <TouchableWithoutFeedback>
-                    <Link href = "./(physics-scenes)/GravitySceneScreen">
-                        <KModuleComponent title={"Gravity"} description={descriptions.binary}/>
+                    <Link href = "./(informatics-scenes)/BinarySceneScreen">
+                        <KModuleComponent title={"Binary numbers"} description={descriptions.binary}/>
                     </Link>
                 </TouchableWithoutFeedback>
 

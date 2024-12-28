@@ -11,7 +11,7 @@ export const styles = StyleSheet.create({
         flexDirection: "row",
         position: "absolute",
         bottom: 50,
-        left: "20%",
+        left: "42%",
         justifyContent: "center",
         alignItems: "center"
     },

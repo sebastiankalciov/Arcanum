@@ -48,7 +48,7 @@
       "expo-font",
       [
       "expo-asset",{
-        "assets": ["./assets/objects/tennis-ball/ball.obj"]
+        "assets": ["./assets/objects/animal_cell/animal_cell.glb"]
       }
       ]
     ],

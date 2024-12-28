@@ -1,5 +1,6 @@
 import {useEffect, useState} from "react";
 import {
+    Viro3DObject,
     ViroAmbientLight,
     ViroARScene, ViroButton,
     ViroFlexView,
@@ -9,18 +10,15 @@ import {
 } from "@reactvision/react-viro";
 import {planetsGravity} from "@/constants/planetsGravity";
 
-// number < -0.015 => object falls faster
-// number > -0.015 => object falls slower
-
 const info = "What is Gravity?\n" +
-    "Gravity is a force that pulls objects toward each other." +
-    "On Earth, it’s what causes objects to fall to the ground." +
-    "Everything with mass is affected by gravity, from tiny particles to entire planets," +
-    "and the force depends on the mass of the objects and the distance between them." +
-    "Earth’s Gravity\n" +
-    "Earth’s gravity keeps us and everything else grounded." +
-    "It pulls objects toward the center of the planet with a strength of about 9.8 meters per" +
-    "second squared (m/s²). This is why when you drop something, it always falls."
+    "Gravity is a force that pulls objects toward each other.\n\n" +
+    "On Earth, it’s what causes objects to fall to the ground.\n" +
+    "Everything with mass is affected by gravity, from tiny particles\nto entire planets," +
+    "and the force depends on the mass of the objects\nand the distance between them.\n\n" +
+    "Earth’s gravity keeps us and everything else grounded.\n" +
+    "It pulls objects toward the center of the planet \nwith a strength of about 9.8 meters per" +
+    "second squared (m/s²).\n\n This is why when you drop something, it always falls."
+
 export const GravitySceneAR = () => {
 
     const [isAnimationPlaying, setIsAnimationPlaying] = useState<boolean>(false);
@@ -86,36 +84,26 @@ export const GravitySceneAR = () => {
             />
 
             {/* sphere */}
-            <ViroSphere
-                radius={sphereRadius}
+            <Viro3DObject
+                type={"GLB"}
+                source={require("../../../assets/objects/old_soccer_ball.glb")}
                 position={spherePosition}
-                materials={["yellowMaterial"]}
+                scale={[0.1, 0.1, 0.1]}
             />
 
             {/* text card */}
-            <ViroFlexView
-                position={[2, 0.2, -2]}
-                rotation={[0, -45, 0]}
-                width={3.5}
-                height={1.5}
-                style={{
-                    backgroundColor: "#ffffff88",
-                    borderRadius: 0.1,
-                    padding: 0.1,
-                }}
-            >
-
                 <ViroText
                     text={info}
                     style={{
                         fontFamily: "Arial",
                         fontSize: 12,
                         color: "#000000",
-                        width: 3.5
                     }}
+                    height={5}
+                    width={6}
+                    position={[2.4, -0.5, -2.5]}
+                    rotation={[0, -50, 0]}
                 />
-
-            </ViroFlexView>
 
             {/* earth planet label & button*/}
             <ViroText

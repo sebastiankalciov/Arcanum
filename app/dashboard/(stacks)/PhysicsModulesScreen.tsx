@@ -9,7 +9,7 @@ import {KSpacer} from "@/components/KSpacer";
 
 const descriptions = {
     "gravity": "\n" +
-        "Learn the basics of gravity!\nExplore how objects fall, " +
+        "Learn the basics of gravity!\n\nExplore how objects fall, " +
         "understand gravitational force, and try an interactive simulation to see gravity in action",
     "electrics": "\n" +
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit." +

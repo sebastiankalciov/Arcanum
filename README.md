@@ -1,4 +1,4 @@
-# Arcanum
+# Arcanum <img src="assets/images/icon.png" width="30" height = "30"/>
 **Arcanum** is an interactive mobile application made with **React Native** developed to teach school subjects using **Augmented Reality**.
 
 

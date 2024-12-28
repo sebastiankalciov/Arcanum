@@ -1,8 +1,9 @@
 import {collection, getDocs} from "@firebase/firestore";
 import {firestore} from "@/firebase/config";
+import {lectures} from "@/constants/totalLectures";
 
 export const computeProgress = async (email: string, module:string) => {
-    const totalLectures = 3;
+    const totalLectures = lectures;
     const progressCollection = collection(firestore, "users", email, module);
 
     try {

@@ -8,8 +8,8 @@ import {GravitySceneAR} from "@/components/ar-scenes/physics/GravitySceneAR";
 import {addProgress} from "@/utils/addProgress";
 import {auth} from "@/firebase/config";
 
-const MODULE = "PHYSICS";
-const LECTURE = "GRAVITY";
+const SUBJECT = "PHYSICS";
+const MODULE = "GRAVITY";
 
 export default function GravitySceneScreen() {
 
@@ -20,11 +20,10 @@ export default function GravitySceneScreen() {
     }
 
     useEffect(() => {
-        addProgress(`${auth.currentUser?.email}`, MODULE, LECTURE).then(r => {
+        addProgress(`${auth.currentUser?.email}`, SUBJECT, MODULE).then(r => {
             console.log(r);
         });
     })
-
 
     return (
             <View style = {styles.container}>

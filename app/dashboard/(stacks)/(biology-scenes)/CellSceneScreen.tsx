@@ -8,8 +8,8 @@ import {addProgress} from "@/utils/addProgress";
 import {auth} from "@/firebase/config";
 import {CellSceneAR} from "@/components/ar-scenes/biology/CellSceneAR";
 
-const MODULE = "BIOLOGY";
-const LECTURE = "CELL";
+const SUBJECT = "BIOLOGY";
+const MODULE = "CELL";
 
 export default function CellSceneScreen() {
 
@@ -20,11 +20,10 @@ export default function CellSceneScreen() {
     }
 
     useEffect(() => {
-        addProgress(`${auth.currentUser?.email}`, MODULE, LECTURE).then(r => {
+        addProgress(`${auth.currentUser?.email}`, SUBJECT, MODULE).then(r => {
             console.log(r);
         });
     })
-
 
     return (
         <View style = {styles.container}>

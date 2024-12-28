@@ -8,8 +8,8 @@ import {addProgress} from "@/utils/addProgress";
 import {auth} from "@/firebase/config";
 import {BinarySceneAR} from "@/components/ar-scenes/informatics/BinarySceneAR";
 
-const MODULE = "INFORMATICS";
-const LECTURE = "BINARY";
+const SUBJECT = "INFORMATICS";
+const MODULE = "BINARY";
 
 export default function BinarySceneScreen() {
 
@@ -20,11 +20,10 @@ export default function BinarySceneScreen() {
     }
 
     useEffect(() => {
-        addProgress(`${auth.currentUser?.email}`, MODULE, LECTURE).then(r => {
+        addProgress(`${auth.currentUser?.email}`, SUBJECT, MODULE).then(r => {
             console.log(r);
         });
     })
-
 
     return (
         <View style = {styles.container}>

@@ -1,7 +1,7 @@
 import {
     Viro3DObject,
     ViroAmbientLight,
-    ViroARScene, ViroFlexView,
+    ViroARScene,
     ViroSpotLight, ViroText, ViroTrackingReason
 } from "@reactvision/react-viro";
 

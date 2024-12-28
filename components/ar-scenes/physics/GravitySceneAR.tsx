@@ -3,9 +3,7 @@ import {
     Viro3DObject,
     ViroAmbientLight,
     ViroARScene, ViroButton,
-    ViroFlexView,
     ViroMaterials,
-    ViroSphere,
     ViroSpotLight, ViroText, ViroTrackingReason
 } from "@reactvision/react-viro";
 import {planetsGravity} from "@/constants/planetsGravity";
@@ -39,7 +37,6 @@ export const GravitySceneAR = () => {
         let interval: NodeJS.Timeout | null = null;
 
         if (isAnimationPlaying) {
-            console.log(gravity);
             interval = setInterval(() => {
                 setSpherePosition(([x, y, z]) => {
                     if (y - sphereRadius >= groundY) {
@@ -83,7 +80,7 @@ export const GravitySceneAR = () => {
                 castsShadow={true}
             />
 
-            {/* sphere */}
+            {/* ball */}
             <Viro3DObject
                 type={"GLB"}
                 source={require("../../../assets/objects/old_soccer_ball.glb")}

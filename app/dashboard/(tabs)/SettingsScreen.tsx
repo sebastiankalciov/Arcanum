@@ -1,7 +1,5 @@
 import {Alert, Text, TouchableOpacity, View} from "react-native";
-import {useFonts} from "expo-font";
 import {KContainer} from "@/components/KContainer";
-import {Colors} from "@/styles";
 import {styles} from "@/styles/screens/SettingsScreen.styles";
 import {signOut} from "@firebase/auth";
 import {auth} from "@/firebase/config";
@@ -21,6 +19,7 @@ export default function SettingsScreen() {
             }
         ])
     }
+
 
     return (
         <KContainer>

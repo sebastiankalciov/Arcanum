@@ -1,4 +1,4 @@
-import {Text, TouchableOpacity, View} from "react-native";
+import {Text, View} from "react-native";
 import {styles} from "@/styles/screens/HomeScreen.styles";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import FontAwesome6 from "@expo/vector-icons/FontAwesome6";

@@ -83,21 +83,27 @@ export default function HomeScreen() {
                 <View style = {styles.progressContainer}>
                     <View style = {styles.progressPhysicsContainer}>
                         <Text style = {styles.progressSubjectTitle}>Physics</Text>
-                        <Text style = {styles.progressStatsText}>{physicsProgress !== null ? `${physicsProgress}%` : "Loading..."}</Text>
+                        <Text style = {styles.progressStatsText}>
+                            {physicsProgress !== null ? `${physicsProgress}%` : "Loading..."}
+                        </Text>
                     </View>
                 </View>
 
                 <View style = {styles.progressContainer}>
                     <View style = {styles.progressPhysicsContainer}>
                         <Text style = {styles.progressSubjectTitle}>Biology</Text>
-                        <Text style = {styles.progressStatsText}>{biologyProgress !== null ? `${biologyProgress}%` : "Loading..."}</Text>
+                        <Text style = {styles.progressStatsText}>
+                            {biologyProgress !== null ? `${biologyProgress}%` : "Loading..."}
+                        </Text>
                     </View>
                 </View>
 
                 <View style = {styles.progressContainer}>
                     <View style = {styles.progressInfoContainer}>
                         <Text style = {styles.progressSubjectTitle}>Informatics</Text>
-                        <Text style = {styles.progressStatsText}>{informaticsProgress !== null ? `${informaticsProgress}%` : "Loading..."}</Text>
+                        <Text style = {styles.progressStatsText}>
+                            {informaticsProgress !== null ? `${informaticsProgress}%` : "Loading..."}
+                        </Text>
                     </View>
                 </View>
 

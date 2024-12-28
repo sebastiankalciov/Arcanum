@@ -6,7 +6,7 @@ import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import {styles} from "@/styles/screens/ar-scenes";
 import {addProgress} from "@/utils/addProgress";
 import {auth} from "@/firebase/config";
-import {BinarySceneAR} from "@/components/ar-scenes/informatics/BinarySceneAR";
+import {BinarySceneAR} from "@/components/ar-scenes/informatics";
 
 const SUBJECT = "INFORMATICS";
 const MODULE = "BINARY";

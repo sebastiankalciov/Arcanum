@@ -4,7 +4,7 @@ import {useRouter} from "expo-router";
 import React, {useEffect} from "react";
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import {styles} from "@/styles/screens/ar-scenes";
-import {GravitySceneAR} from "@/components/ar-scenes/physics/GravitySceneAR";
+import {GravitySceneAR} from "@/components/ar-scenes/physics";
 import {addProgress} from "@/utils/addProgress";
 import {auth} from "@/firebase/config";
 

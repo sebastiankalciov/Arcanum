@@ -5,28 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2334eba2-8320-4b00-958b-689459424738" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/components/KSubjectScreen.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/dashboard/(stacks)/(biology-scenes)/CellSceneScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/dashboard/(stacks)/(biology-scenes)/CellSceneScreen.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/dashboard/(stacks)/(informatics-scenes)/BinarySceneScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/dashboard/(stacks)/(informatics-scenes)/BinarySceneScreen.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/dashboard/(stacks)/(physics-scenes)/GravitySceneScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/dashboard/(stacks)/(physics-scenes)/GravitySceneScreen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/dashboard/(stacks)/BiologyModulesScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/dashboard/(stacks)/BiologyModulesScreen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/dashboard/(stacks)/InformaticsModulesScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/dashboard/(stacks)/InformaticsModulesScreen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/dashboard/(stacks)/PhysicsModulesScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/dashboard/(stacks)/PhysicsModulesScreen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/dashboard/(tabs)/HomeScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/dashboard/(tabs)/HomeScreen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/dashboard/(tabs)/SettingsScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/dashboard/(tabs)/SettingsScreen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/skull-object.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/objects/animal_cell/animal_cell.glb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/objects/animal_cell/license.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/objects/animal_cell/scene.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/objects/animal_cell/scene.gltf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/objects/binary_numbers.glb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/objects/glowing_cube.glb" beforeDir="false" afterPath="$PROJECT_DIR$/assets/objects/glowing_cube.glb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/KSubjectComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/KSubjectComponent.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ar-scenes/biology/CellSceneAR.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ar-scenes/biology/CellSceneAR.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ar-scenes/informatics/BinarySceneAR.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ar-scenes/informatics/BinarySceneAR.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ar-scenes/physics/GravitySceneAR.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ar-scenes/physics/GravitySceneAR.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/screens/SettingsScreen.styles.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/styles/screens/SettingsScreen.styles.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ar-scenes/biology/CellSceneAR.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ar-scenes/biology/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ar-scenes/informatics/BinarySceneAR.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ar-scenes/informatics/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ar-scenes/physics/GravitySceneAR.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ar-scenes/physics/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,7 +143,7 @@
       <workItem from="1735324281476" duration="51000" />
       <workItem from="1735324353359" duration="745000" />
       <workItem from="1735330852179" duration="4766000" />
-      <workItem from="1735409914241" duration="16256000" />
+      <workItem from="1735409914241" duration="17166000" />
     </task>
     <servers />
   </component>

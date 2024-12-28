@@ -6,7 +6,7 @@ import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import {styles} from "@/styles/screens/ar-scenes";
 import {addProgress} from "@/utils/addProgress";
 import {auth} from "@/firebase/config";
-import {CellSceneAR} from "@/components/ar-scenes/biology/CellSceneAR";
+import {CellSceneAR} from "@/components/ar-scenes/biology";
 
 const SUBJECT = "BIOLOGY";
 const MODULE = "CELL";

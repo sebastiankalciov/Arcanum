@@ -8,7 +8,8 @@ export default function TabLayout() {
         <Tabs screenOptions={{
             headerShown: false,
             tabBarActiveTintColor: Colors.accentColor,
-            tabBarInactiveTintColor: Colors.darkGrey
+            tabBarInactiveTintColor: Colors.darkGrey,
+            tabBarStyle: {borderTopWidth: 0, borderTopColor: 'transparent'}
         }}>
             <Tabs.Screen
                 name = "HomeScreen"
@@ -17,7 +18,8 @@ export default function TabLayout() {
                     tabBarStyle: {
                         backgroundColor: Colors.primaryYellow,
                         borderTopWidth: 0,
-                        borderWidth: 0
+                        borderWidth: 0,
+                        borderTopColor: 'transparent',
                     },
                     tabBarIcon: ({ color }) =>
                         <AntDesign size={28} name="home" color={color}/>,
@@ -26,7 +28,11 @@ export default function TabLayout() {
                 name = "SettingsScreen"
                 options = {{
                     tabBarShowLabel: false,
-                    tabBarStyle: {backgroundColor: Colors.primaryYellow, borderWidth: 0},
+                    tabBarStyle: {
+                        backgroundColor: Colors.primaryYellow,
+                        borderWidth: 0,
+                        borderTopWidth: 0,
+                        borderTopColor: 'transparent'},
                     tabBarIcon: ({ color }) =>
                         <Feather size={28} name="settings" color={color}/>,
                 }}/>

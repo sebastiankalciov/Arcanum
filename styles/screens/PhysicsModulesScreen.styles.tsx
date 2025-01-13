@@ -23,17 +23,11 @@ export const styles = StyleSheet.create({
         flex: 1,
         gap: 30,
         alignItems: "center",
-
     },
     progressPhysicsContainer: {
         padding: 10,
         backgroundColor: Colors.lightYellowContrast,
         borderRadius: 15,
-        borderBottomWidth: 1.5,
-        borderLeftWidth: 1.5,
-        borderRightWidth: 1.5,
-        borderEndWidth: 5,
-        borderStartWidth: 5,
         borderColor: Colors.darkYellowContrast
     },
     moduleTitle: {

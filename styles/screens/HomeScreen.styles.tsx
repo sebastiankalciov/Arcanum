@@ -10,10 +10,6 @@ export const styles = StyleSheet.create({
     iconContainer: {
         padding: 5,
         backgroundColor: Colors.lightYellowContrast,
-        borderLeftWidth: 1.5,
-        borderRightWidth: 1.5,
-        borderBottomWidth: 4,
-        borderColor: Colors.darkYellowContrast,
         borderRadius: 15,
     },
     contentContainer: {
@@ -37,12 +33,6 @@ export const styles = StyleSheet.create({
         flexDirection: "row",
         backgroundColor: Colors.lightYellowContrast,
         borderRadius: 15,
-        borderBottomWidth: 1.5,
-        borderLeftWidth: 1.5,
-        borderRightWidth: 1.5,
-        borderEndWidth: 5,
-        borderStartWidth: 5,
-        borderColor: Colors.darkYellowContrast
     },
     progressInfoContainer: {
         padding: 10,
@@ -52,12 +42,6 @@ export const styles = StyleSheet.create({
         flexDirection: "row",
         backgroundColor: Colors.lightYellowContrast,
         borderRadius: 15,
-        borderBottomWidth: 1.5,
-        borderLeftWidth: 1.5,
-        borderRightWidth: 1.5,
-        borderEndWidth: 5,
-        borderStartWidth: 5,
-        borderColor: Colors.darkYellowContrast
     },
     progressSubjectTitle: {
         fontSize: 20,
@@ -84,7 +68,7 @@ export const styles = StyleSheet.create({
         color: Colors.dark
     },
     categoriesText: {
-        fontSize: 25,
+        fontSize: 20,
         fontFamily: "Inter-Bold",
         color: Colors.darkGrey,
     }

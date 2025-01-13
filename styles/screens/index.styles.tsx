@@ -18,7 +18,7 @@ export const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "center",
         backgroundColor: Colors.lightYellowContrast,
-        borderRadius: 30,
+        borderRadius: 10,
         flexDirection: "row",
     },
 

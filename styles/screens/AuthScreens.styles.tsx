@@ -56,8 +56,9 @@ export const styles = StyleSheet.create({
     },
     firstPartTitle: {
         fontSize: 20,
-        fontFamily: "JetBrains-Regular",
+        fontFamily: "Inter-Regular",
         color: "#404040",
+        marginBottom: -10,
 
     },
     title: {

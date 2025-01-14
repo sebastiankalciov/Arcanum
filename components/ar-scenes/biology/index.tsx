@@ -46,7 +46,6 @@ export const CellSceneAR = () => {
                 scale={[0.1, 0.1, 0.1]}
             />
 
-
         </ViroARScene>
     );
 }

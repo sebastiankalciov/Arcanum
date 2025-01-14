@@ -7,16 +7,7 @@
     <list default="true" id="2334eba2-8320-4b00-958b-689459424738" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/dashboard/(stacks)/BiologyModulesScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/dashboard/(stacks)/BiologyModulesScreen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/dashboard/(stacks)/InformaticsModulesScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/dashboard/(stacks)/InformaticsModulesScreen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/dashboard/(stacks)/PhysicsModulesScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/dashboard/(stacks)/PhysicsModulesScreen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/dashboard/(tabs)/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/dashboard/(tabs)/_layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/preview-home.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/preview-home.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/preview-login.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/preview-login.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/screens/AuthScreens.styles.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/styles/screens/AuthScreens.styles.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/screens/HomeScreen.styles.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/styles/screens/HomeScreen.styles.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/screens/PhysicsModulesScreen.styles.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/styles/screens/PhysicsModulesScreen.styles.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/screens/index.styles.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/styles/screens/index.styles.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ar-scenes/biology/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ar-scenes/biology/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,7 +139,8 @@
       <workItem from="1735330852179" duration="4766000" />
       <workItem from="1735409914241" duration="17292000" />
       <workItem from="1735483886662" duration="490000" />
-      <workItem from="1736778852370" duration="4496000" />
+      <workItem from="1736778852370" duration="5109000" />
+      <workItem from="1736864397231" duration="3395000" />
     </task>
     <servers />
   </component>

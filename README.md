@@ -4,12 +4,7 @@
 
 ### Preview
 
-<img src="assets/images/preview-home.jpg" width="300" height = "650"/>
-<img src="assets/images/preview-biologymodules.jpg" width="300" height = "650"/>
-
-
-## Auth system
-<img src="assets/images/preview-login.jpg" width="300" height = "650"/>
+<img src="assets/images/top-features.png" width="1000" height = "580"/>
 
 ### Commands (in order) to create a basic, functional development build (personal notes):
 

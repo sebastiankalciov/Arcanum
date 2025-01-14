@@ -4,7 +4,7 @@
 
 ### Preview
 
-<img src="assets/images/top-features.png" width="1000" height = "580"/>
+<img src="assets/images/top-features.png" width="1000" height = "550"/>
 
 ### Commands (in order) to create a basic, functional development build (personal notes):
 
